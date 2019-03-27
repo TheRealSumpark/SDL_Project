@@ -1,0 +1,6 @@
+prog: main.o Perfect_Collision.o
+	gcc   main.o  Perfect_Collision.c  -o prog -g $(sdl-config --libs --cflags) -lSDL -lSDL_mixer -lSDL_image -lSDL_ttf -lm
+main.o:main.c
+	gcc -c main.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lm
+Perfect_Collision.o:Perfect_Collision.c
+	gcc -c Perfect_Collision.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lm
