@@ -28,7 +28,7 @@ SDL_Color color;
 Uint32 col=0;
 char* pPosition=(char* ) background->pixels;
 pPosition+= (background->pitch * C.Y);
-pPosition+= (background->format->BytesPerPixel *C.X);
+pPosition+= (background->format->BytesPerPixel * C.X);
 memcpy(&col ,pPosition ,background->format->BytesPerPixel);
 
 

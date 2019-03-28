@@ -9,6 +9,7 @@
 #include <SDL/SDL_mixer.h>
 #include <SDL/SDL_ttf.h>
 #include "Perfect_Collision.h"
+#include "Animer_Personnage.h"
 
 void main();
 
