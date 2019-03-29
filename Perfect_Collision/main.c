@@ -67,7 +67,7 @@ perso_mv_left[3]=IMG_Load("mv_left/3.png");
 perso_mv_left[4]=IMG_Load("mv_left/4.png");
 
 SDL_Init(SDL_INIT_VIDEO);
-	ecran = SDL_SetVideoMode(900,800, 0, SDL_HWSURFACE | SDL_DOUBLEBUF);
+	ecran = SDL_SetVideoMode(1920,1080, 0, SDL_HWSURFACE | SDL_DOUBLEBUF);
 	SDL_WM_SetCaption("MENU", NULL);
 
 SDL_Event event;
@@ -161,19 +161,21 @@ switch (State)
 {
 
 
-case DOWN:						Pos_perso.y+=2;
+case DOWN:						Pos_perso.y+=15;
+							
 							C.Y=Pos_perso.y+Pos_perso.h;
-							C.X=Pos_perso.x;
+							C.X=Pos_perso.x;							
 							while (!collision && C.X<=(Pos_perso.x+Pos_perso.w))
 							{
-							collision= Collision_Parfaite(Background,C);C.X++;
+							collision= Collision_Parfaite(Background,C);
+							C.X++;
 							if (collision)
 							{Pos_perso.y--;
 							C.X=Pos_perso.x;
 							C.Y=Pos_perso.y+Pos_perso.h;
 							collision=0;}}break;
 							
-case UP:						Pos_perso.y-=2;
+case UP:						Pos_perso.y-=15;
 							C.Y=Pos_perso.y;
 							C.X=Pos_perso.x;
 							
@@ -190,7 +192,7 @@ case LEFT:						frametime++;
 							perso=perso_mv_left[frame];					
 							frame=Animer_Personnage(&frametime,nmb_mv,frame);
 
-							Pos_perso.x-=2;
+							Pos_perso.x-=15;
 							C.Y=Pos_perso.y;
 							C.X=Pos_perso.x;
 							while (!collision && C.Y<=(Pos_perso.y+Pos_perso.h))
@@ -208,12 +210,13 @@ case RIGHT:
 							frame=Animer_Personnage(&frametime,nmb_mv,frame);
 							
 							
-							Pos_perso.x+=2;			
+							Pos_perso.x+=15;			
 							C.Y=Pos_perso.y;
 							C.X=Pos_perso.x+Pos_perso.w;
 							while (!collision && C.Y<=(Pos_perso.y+Pos_perso.h))
 							{
-							collision= Collision_Parfaite(Background,C);C.Y++;
+							collision= Collision_Parfaite(Background,C);
+							C.Y++;
 							if (collision)
 							{Pos_perso.x--;
 							C.Y=Pos_perso.y;
