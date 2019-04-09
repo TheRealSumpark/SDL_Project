@@ -6,7 +6,7 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_mixer.h>
 #include <SDL/SDL_ttf.h>
-#include "struct_perso_enemy_objet.h"
+#include "perso.h"
 
 int collision(SDL_Surface *p,SDL_Surface *e,SDL_Rect perso,SDL_Rect enemy);
 int collisionbox(SDL_Surface *p,SDL_Surface *o,SDL_Rect perso,SDL_Rect objet);
