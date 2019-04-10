@@ -6,7 +6,7 @@
 #include "quiz.h"
 #include <SDL/SDL_ttf.h>
 #include <time.h>
-int main(int argc,char *argv[])
+int enigme(int argc,char *argv[])
 {
 
 
@@ -30,7 +30,7 @@ int main(int argc,char *argv[])
     SDL_Init(SDL_INIT_VIDEO); // Initialisation de la SDL
     SDL_Surface *ecran =NULL;
     police=TTF_OpenFont("font.ttf",200);
-    ecran=SDL_SetVideoMode(1920,1080, 32,SDL_ANYFORMAT); // Ouverture de la fenêtre
+    ecran=SDL_SetVideoMode(800,600, 32,SDL_ANYFORMAT); // Ouverture de la fenêtre
     backg = IMG_Load("quiz.png");
     positiond.x=0 ;
     positiond.y=0 ;

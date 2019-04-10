@@ -1,6 +1,4 @@
-
-#include "Collision.h"
-
+#include "Collision_trigo.h"
 
 
 int Collision_Ennemi(SDL_Rect Pos_perso,Ennemi Mob)
@@ -18,8 +16,8 @@ centre.y=Mob.Pos_Ennemi.y+(Mob.Pos_Ennemi.h/2);
 
 
 
-rayon_objet=sqrt (pow((Mob.Pos_Ennemi.w/2),2)+pow((Mob.Pos_Ennemi.h/2),2))/2;
-rayon_perso=sqrt (pow((Pos_perso.w/2),2)+pow((Pos_perso.h/2),2))/2.5;
+rayon_objet=sqrt (pow((Mob.Pos_Ennemi.w/2),2)+pow((Mob.Pos_Ennemi.h/2),2));
+rayon_perso=sqrt (pow((Pos_perso.w/2),2)+pow((Pos_perso.h/2),2));
 
 D1=sqrt (pow(centre.x-centre_perso.x,2) + pow(centre.y-centre_perso.y,2));
 D2=rayon_objet+rayon_perso;
