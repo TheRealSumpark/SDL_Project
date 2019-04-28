@@ -1,12 +1,22 @@
 #include  "main.h"
 
 void main(SDL_Surface *ecran)
-{	double angle=0;
+{	
+
+//ROTOZOOM VARIABLES
+double angle=0;
+Map M;
+M.Overview=NULL;
+M.Border=IMG_Load("Border.png");
+SDL_Rect Border_pos;
+M.Pos.x=-30;
+M.Pos.y=-70;
+//
          int d;	int on =0;
 	 srand(time(NULL));
     	d=rand()%3+1;
+		
 	
-
 	int i=0,len,X,Y;
 	Coordinate C;
     	char c ;
@@ -79,9 +89,9 @@ void main(SDL_Surface *ecran)
 	
 		
 	if (!on)
-{ Rotozoom(ecran,b,clef,angle);
-on=1;}
-	
+{	 Rotozoom(ecran,b,clef,angle);
+	on=1;}
+	Mini_map(ecran,M);
 
 	if(localisation==1)
 	{

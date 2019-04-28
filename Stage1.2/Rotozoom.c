@@ -17,7 +17,9 @@ SDL_Flip(ecran);
 SDL_Delay(100);
 Rotozoom(ecran,b,clef,angle);}
 
-
-
 }
  
+
+
+
+

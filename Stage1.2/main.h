@@ -79,6 +79,17 @@ typedef struct EO
 	SDL_Rect positionobjett;
 }EO;
 
+
+typedef struct
+{
+	SDL_Surface *Border;
+	SDL_Surface *Overview;
+	SDL_Rect Pos;
+
+
+}Map;
+
+
 void initialiser (background *b);
 void afficher (SDL_Surface *ecran , background *b ) ;
 Player Initial_personnage();
@@ -103,4 +114,5 @@ void quiz(SDL_Surface *ecran,int d);
 void good(SDL_Surface *ecran);
 void main(SDL_Surface *ecran);
 void Rotozoom(SDL_Surface * ecran, background b,EO clef, double angle);
+void Mini_map(SDL_Surface* ecran,Map M);
 #endif
