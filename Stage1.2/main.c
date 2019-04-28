@@ -1,8 +1,8 @@
 #include  "main.h"
 
 void main(SDL_Surface *ecran)
-{
-         int d;	
+{	double angle=0;
+         int d;	int on =0;
 	 srand(time(NULL));
     	d=rand()%3+1;
 	
@@ -65,6 +65,9 @@ void main(SDL_Surface *ecran)
                 continuer = 0;
                 break;
 	}
+
+
+
 	afficher(ecran,&b);
 	Initial_objet(ob,&clef,&porte,&piste);
 	afficherobjet(ob,&clef,&porte,&piste,ecran,&b);
@@ -73,6 +76,13 @@ void main(SDL_Surface *ecran)
 	deplacement(Sens,State,&hero);
 	Animer_Personnage(&frametime ,nmbb_frame,&frame,&hero,&Sens,&State);	
 	Afficher_perso(hero,hero.P_health,ecran);
+	
+		
+	if (!on)
+{ Rotozoom(ecran,b,clef,angle);
+on=1;}
+	
+
 	if(localisation==1)
 	{
               init_images;

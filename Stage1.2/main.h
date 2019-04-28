@@ -18,6 +18,8 @@
 #include "Collision_trigo.h"
 //#include "Perfect_Collision.h"
 #include "quiz.h"
+#include <SDL/SDL_rotozoom.h>
+
 typedef struct 
 {
 
@@ -100,4 +102,5 @@ void solution(SDL_Surface *ecran,int d);
 void quiz(SDL_Surface *ecran,int d);
 void good(SDL_Surface *ecran);
 void main(SDL_Surface *ecran);
+void Rotozoom(SDL_Surface * ecran, background b,EO clef, double angle);
 #endif

@@ -1,5 +1,5 @@
-prog:collision_bounding_box.o main.o perso.o Animer_Personnage.o initialiser_ojbets.o Afficher_objets.o initialiser_background.o afficher_background.o scrolling.o collision.o Init_Ennemi.o Afficher_Ennemi.o quiz.o Collision_trigo.o Perfect_Collision.o mvtaleatoire.o
-	gcc collision_bounding_box.o main.o perso.o Animer_Personnage.o initialiser_ojbets.o Afficher_objets.o initialiser_background.o afficher_background.o scrolling.o collision.o Init_Ennemi.o Afficher_Ennemi.o quiz.o Collision_trigo.o Perfect_Collision.o mvtaleatoire.o -o prog -g $(sdl-config --libs --cflags) -lSDL -lSDL_mixer -lSDL_image -lSDL_ttf -lm
+prog:collision_bounding_box.o main.o perso.o Animer_Personnage.o initialiser_ojbets.o Afficher_objets.o initialiser_background.o afficher_background.o scrolling.o collision.o Init_Ennemi.o Afficher_Ennemi.o quiz.o Collision_trigo.o Perfect_Collision.o mvtaleatoire.o Rotozoom.o
+	gcc collision_bounding_box.o main.o perso.o Animer_Personnage.o initialiser_ojbets.o Afficher_objets.o initialiser_background.o afficher_background.o scrolling.o collision.o Init_Ennemi.o Afficher_Ennemi.o quiz.o Collision_trigo.o Perfect_Collision.o mvtaleatoire.o Rotozoom.o -o prog -g $(sdl-config --libs --cflags) -lSDL -lSDL_mixer -lSDL_image -lSDL_ttf -lm -lSDL_gfx
 collision_bounding_box.o:collision_bounding_box.c
 	gcc -c collision_bounding_box.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf
 Animer_Personnage.o:Animer_Personnage.c
@@ -15,7 +15,7 @@ afficher_background.o:afficher_background.c
 scrolling.o:scrolling.c
 	gcc -c scrolling.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf
 main.o:main.c
-	gcc -c main.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf
+	gcc -c main.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lSDL_gfx
 perso.o:perso.c
 	gcc -c perso.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf
 collision.o:collision.c
@@ -32,3 +32,5 @@ Perfect_Collision.o:Perfect_Collision.c
 	gcc -c Perfect_Collision.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lm
 Collision_trigo.o:Collision_trigo.c
 	gcc -c Collision_trigo.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lm
+Rotozoom.o:Rotozoom.c
+	gcc -c Rotozoom.c -g $(sdl-config --libs --cflags) -lSDL_mixer -lSDL_image -lSDL_ttf -lm -lSDL_gfx
