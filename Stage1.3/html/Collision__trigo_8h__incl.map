@@ -1,0 +1,11 @@
+<map id="Collision_trigo.h" name="Collision_trigo.h">
+<area shape="rect" id="node9" href="$Ennemi_8h.html" title="Ennemi.h" alt="" coords="925,237,1002,263"/>
+<area shape="rect" id="node10" href="$jouer_8h.html" title="jouer.h" alt="" coords="907,80,969,107"/>
+<area shape="rect" id="node13" href="$collision__bounding__box_8h.html" title="collision_bounding\l_box.h" alt="" coords="671,229,799,271"/>
+<area shape="rect" id="node14" href="$Init__Ennemi_8h.html" title="Init_Ennemi.h" alt="" coords="1059,155,1161,181"/>
+<area shape="rect" id="node15" href="$Afficher__Ennemi_8h.html" title="Afficher_Ennemi.h" alt="" coords="823,155,952,181"/>
+<area shape="rect" id="node16" href="$mvtaleatoire_8h.html" title="mvtaleatoire.h" alt="" coords="1421,155,1525,181"/>
+<area shape="rect" id="node17" href="$main_8h.html" title="main.h" alt="" coords="566,155,627,181"/>
+<area shape="rect" id="node19" href="$quiz_8h.html" title="quiz.h" alt="" coords="1843,155,1900,181"/>
+<area shape="rect" id="node18" href="$options_8h.html" title="options.h" alt="" coords="522,237,597,263"/>
+</map>

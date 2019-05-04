@@ -1,0 +1,10 @@
+<map id="collision" name="collision">
+<area shape="rect" id="node2" href="$jouer_8h.html#a1201e4f88c0ee7608ca131ce01681997" title="collisionall" alt="" coords="412,78,495,104"/>
+<area shape="rect" id="node6" href="$jouer_8h.html#aaf6f1dec5bb7d4e93d8d580a8e550442" title="collision" alt="" coords="123,90,192,116"/>
+<area shape="rect" id="node7" href="$jouer_8h.html#aada0004db077b368ab0b29a7f0e74d72" title="collisionbox" alt="" coords="257,27,347,54"/>
+<area shape="rect" id="node8" href="$jouer_8h.html#aa7a006f89e162da81cf20be078bf3653" title="Collision_Ennemi" alt="" coords="241,128,363,155"/>
+<area shape="rect" id="node9" href="$Perfect__Collision_8h.html#a3020d18687b9b653f5faf2bc7dce1a04" title="Collision_Parfaite" alt="" coords="240,179,364,206"/>
+<area shape="rect" id="node3" href="$main_8h.html#ad213c186f0cdc96ff9980238c752ac7c" title="jouer" alt="" coords="543,78,593,104"/>
+<area shape="rect" id="node4" href="$main_8h.html#ad059f5084a6fceece8f6fb51a6d4648a" title="main" alt="" coords="641,78,692,104"/>
+<area shape="rect" id="node5" href="$options_8h.html#a204b8f657e1bc7a81e3974398e9b6329" title="choix_options" alt="" coords="740,78,843,104"/>
+</map>

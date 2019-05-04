@@ -1,0 +1,677 @@
+\hypertarget{jouer_8h}{}\section{jouer.\+h File Reference}
+\label{jouer_8h}\index{jouer.\+h@{jouer.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+mixer.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+ttf.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}collision\+\_\+bounding\+\_\+box.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Init\+\_\+\+Ennemi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Afficher\+\_\+\+Ennemi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mvtaleatoire.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ennemi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Collision\+\_\+trigo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}quiz.\+h\char`\"{}}\\*
+Include dependency graph for jouer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCoordinate}{Coordinate}
+\item 
+struct \hyperlink{structbackground}{background}
+\item 
+struct \hyperlink{structPlayer}{Player}
+\item 
+struct \hyperlink{structEO}{EO}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structPlayer}{Player} \hyperlink{jouer_8h_a480a040facb94f90060562cd65274385}{Player}
+\item 
+typedef struct \hyperlink{structEO}{EO} \hyperlink{jouer_8h_ae2c08096f52a2326f5d7dac728eba859}{EO}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} \{ \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1ba831c130f9c83adc963152d232a9d61c7}{A\+T\+T\+A\+CK}, 
+\hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1bafd6a0e4343048b10646dd2976cc5ad18}{I\+D\+LE}, 
+\hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1bafdb9f1cb7b335ece267de4cd11688bfa}{W\+A\+LK}
+ \}
+\item 
+enum \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \{ \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa}{UP}, 
+\hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da}{D\+O\+WN}, 
+\hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38}{R\+I\+G\+HT}, 
+\hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065}{L\+E\+FT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{jouer_8h_a627e8dbcc77f69a29241e6dccf38d77d}{initialiser} (\hyperlink{structbackground}{background} $\ast$b)
+\item 
+void \hyperlink{jouer_8h_ad5e245ac884b3a5bc774dca864a5e0c0}{afficher} (S\+D\+L\+\_\+\+Surface $\ast$ecran, \hyperlink{structbackground}{background} $\ast$b)
+\item 
+\hyperlink{structPlayer}{Player} \hyperlink{jouer_8h_a7fcb81f452dcbccb499a3ce85062d589}{Initial\+\_\+personnage} ()
+\item 
+void \hyperlink{jouer_8h_a72fcd39f3658ec12884bd69a639359ee}{event\+\_\+handler} (S\+D\+L\+\_\+\+Event event, \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} $\ast$Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} $\ast$State, int $\ast$keys\+Held)
+\item 
+void \hyperlink{jouer_8h_aff1748dab6c55558808b6a23b947f974}{deplacement} (\hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} State, \hyperlink{structPlayer}{Player} $\ast$hero, int $\ast$keys\+Held)
+\item 
+void \hyperlink{jouer_8h_aadd479ddab8191523cfee947e8a718b1}{Afficher\+\_\+perso} (\hyperlink{structPlayer}{Player} hero, int vie, S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{jouer_8h_a3dc3993bdcecc71ad5576c072f25e29d}{Animer\+\_\+\+Personnage} (int $\ast$frametime, int nmb\+\_\+frame, int $\ast$frame, \hyperlink{structPlayer}{Player} $\ast$hero, \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} $\ast$Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} $\ast$State)
+\item 
+void \hyperlink{jouer_8h_a86f775c18541dd59fc0bd67da6884963}{Initial\+\_\+objet} (\hyperlink{structEO}{EO} $\ast$ob, \hyperlink{structEO}{EO} $\ast$clef, \hyperlink{structEO}{EO} $\ast$porte, \hyperlink{structEO}{EO} $\ast$piste)
+\item 
+void \hyperlink{jouer_8h_a42cab3047c025df170f86a167a498c40}{afficherobjet} (\hyperlink{structEO}{EO} $\ast$ob, \hyperlink{structEO}{EO} $\ast$clef, \hyperlink{structEO}{EO} $\ast$porte, \hyperlink{structEO}{EO} $\ast$piste, S\+D\+L\+\_\+\+Surface $\ast$ecran, \hyperlink{structbackground}{background} $\ast$b)
+\item 
+void \hyperlink{jouer_8h_a81c2e8441b67355bf2c68a5c0fa4d2d6}{scrolling} (\hyperlink{structbackground}{background} $\ast$b, S\+D\+L\+\_\+\+Surface $\ast$ecran, \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} State)
+\item 
+int \hyperlink{jouer_8h_aaf6f1dec5bb7d4e93d8d580a8e550442}{collision} (S\+D\+L\+\_\+\+Surface $\ast$p, S\+D\+L\+\_\+\+Surface $\ast$e, S\+D\+L\+\_\+\+Rect perso, S\+D\+L\+\_\+\+Rect enemy)
+\item 
+int \hyperlink{jouer_8h_aada0004db077b368ab0b29a7f0e74d72}{collisionbox} (S\+D\+L\+\_\+\+Surface $\ast$p, S\+D\+L\+\_\+\+Surface $\ast$o, S\+D\+L\+\_\+\+Rect perso, S\+D\+L\+\_\+\+Rect objet)
+\item 
+int \hyperlink{jouer_8h_a1201e4f88c0ee7608ca131ce01681997}{collisionall} (\hyperlink{structEO}{EO} $\ast$ob, \hyperlink{structEO}{EO} clef, \hyperlink{structEO}{EO} porte, \hyperlink{structEO}{EO} piste, \hyperlink{structPlayer}{Player} $\ast$hero, int $\ast$vie, int $\ast$score, \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} State, \hyperlink{structEnnemi}{Ennemi} Mob\mbox{[}$\,$\mbox{]}, \hyperlink{structCoordinate}{Coordinate} C, S\+D\+L\+\_\+\+Surface $\ast$Background)
+\item 
+int \hyperlink{jouer_8h_aa7a006f89e162da81cf20be078bf3653}{Collision\+\_\+\+Ennemi} (S\+D\+L\+\_\+\+Rect Pos\+\_\+perso, \hyperlink{structEnnemi}{Ennemi} Mob)
+\item 
+\hyperlink{structEnnemi}{Ennemi} \hyperlink{jouer_8h_acc0a5eae1c2488e30bf55a4b064cc833}{Init\+\_\+\+Ennemi} (char Mob\+\_\+\+Name\mbox{[}$\,$\mbox{]}, int X, int Y)
+\item 
+void \hyperlink{jouer_8h_a5bd3b2cfb590a56ce994b524cd23e1aa}{Afficher\+\_\+\+Ennemi} (\hyperlink{structEnnemi}{Ennemi} Mob, S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{jouer_8h_afc8b6113658127f5da2f173a2f07d697}{mvtaleatoire} (\hyperlink{structEnnemi}{Ennemi} $\ast$mob, int max, int min)
+\item 
+void \hyperlink{jouer_8h_a17f70e17a66034ab2cfe4ecd23d0a96a}{enigme} (int d, S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{jouer_8h_a313b3d1a9789026d9311ce31218dfddc}{reponse} (S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)
+\item 
+void \hyperlink{jouer_8h_a2774260562b0dca66057190a74a45edb}{solution} (S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)
+\item 
+void \hyperlink{jouer_8h_aec72a4538c45c4b123f92b3aa554980a}{quiz} (S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)
+\item 
+void \hyperlink{jouer_8h_a7dd2f18aee0b8b5e643a0817ad685d34}{good} (S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{jouer_8h_ad213c186f0cdc96ff9980238c752ac7c}{jouer} (S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{jouer_8h_a9104e461369cd1360ebfae450d4a49e6}{Nettoyer\+\_\+stage} (S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+int \hyperlink{jouer_8h_a34cbc014d36b81852811368db4a70a98}{arduino\+Write\+Data} (int w)
+\item 
+int \hyperlink{jouer_8h_af26975b0e6c2018b62f8f188392ffba8}{arduino\+Read\+Data} (int $\ast$x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{jouer.\+h@{jouer.\+h}!EO@{EO}}
+\index{EO@{EO}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{EO}{EO}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf EO} {\bf EO}}\hypertarget{jouer_8h_ae2c08096f52a2326f5d7dac728eba859}{}\label{jouer_8h_ae2c08096f52a2326f5d7dac728eba859}
+\index{jouer.\+h@{jouer.\+h}!Player@{Player}}
+\index{Player@{Player}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Player}{Player}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Player} {\bf Player}}\hypertarget{jouer_8h_a480a040facb94f90060562cd65274385}{}\label{jouer_8h_a480a040facb94f90060562cd65274385}
+
+
+\subsection{Enumeration Type Documentation}
+\index{jouer.\+h@{jouer.\+h}!Direction@{Direction}}
+\index{Direction@{Direction}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Direction}{Direction}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Direction}}\hypertarget{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{}\label{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{UP@{UP}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!UP@{UP}}\item[{\em 
+UP\hypertarget{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa}{}\label{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa}
+}]\index{D\+O\+WN@{D\+O\+WN}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!D\+O\+WN@{D\+O\+WN}}\item[{\em 
+D\+O\+WN\hypertarget{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da}{}\label{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da}
+}]\index{R\+I\+G\+HT@{R\+I\+G\+HT}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}\item[{\em 
+R\+I\+G\+HT\hypertarget{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38}{}\label{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38}
+}]\index{L\+E\+FT@{L\+E\+FT}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!L\+E\+FT@{L\+E\+FT}}\item[{\em 
+L\+E\+FT\hypertarget{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065}{}\label{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065}
+}]\end{description}
+\end{Desc}
+\index{jouer.\+h@{jouer.\+h}!Etat@{Etat}}
+\index{Etat@{Etat}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Etat}{Etat}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Etat}}\hypertarget{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{}\label{jouer_8h_a767b7a63d7677f92d697621b4166af1b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+T\+T\+A\+CK@{A\+T\+T\+A\+CK}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!A\+T\+T\+A\+CK@{A\+T\+T\+A\+CK}}\item[{\em 
+A\+T\+T\+A\+CK\hypertarget{jouer_8h_a767b7a63d7677f92d697621b4166af1ba831c130f9c83adc963152d232a9d61c7}{}\label{jouer_8h_a767b7a63d7677f92d697621b4166af1ba831c130f9c83adc963152d232a9d61c7}
+}]\index{I\+D\+LE@{I\+D\+LE}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!I\+D\+LE@{I\+D\+LE}}\item[{\em 
+I\+D\+LE\hypertarget{jouer_8h_a767b7a63d7677f92d697621b4166af1bafd6a0e4343048b10646dd2976cc5ad18}{}\label{jouer_8h_a767b7a63d7677f92d697621b4166af1bafd6a0e4343048b10646dd2976cc5ad18}
+}]\index{W\+A\+LK@{W\+A\+LK}!jouer.\+h@{jouer.\+h}}\index{jouer.\+h@{jouer.\+h}!W\+A\+LK@{W\+A\+LK}}\item[{\em 
+W\+A\+LK\hypertarget{jouer_8h_a767b7a63d7677f92d697621b4166af1bafdb9f1cb7b335ece267de4cd11688bfa}{}\label{jouer_8h_a767b7a63d7677f92d697621b4166af1bafdb9f1cb7b335ece267de4cd11688bfa}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{jouer.\+h@{jouer.\+h}!afficher@{afficher}}
+\index{afficher@{afficher}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{afficher(\+S\+D\+L\+\_\+\+Surface $\ast$ecran, background $\ast$b)}{afficher(SDL_Surface *ecran, background *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void afficher (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{{\bf background} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_ad5e245ac884b3a5bc774dca864a5e0c0}{}\label{jouer_8h_ad5e245ac884b3a5bc774dca864a5e0c0}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_ad5e245ac884b3a5bc774dca864a5e0c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Afficher\+\_\+\+Ennemi@{Afficher\+\_\+\+Ennemi}}
+\index{Afficher\+\_\+\+Ennemi@{Afficher\+\_\+\+Ennemi}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Afficher\+\_\+\+Ennemi(\+Ennemi Mob, S\+D\+L\+\_\+\+Surface $\ast$ecran)}{Afficher_Ennemi(Ennemi Mob, SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void Afficher\+\_\+\+Ennemi (
+\begin{DoxyParamCaption}
+\item[{{\bf Ennemi}}]{Mob, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a5bd3b2cfb590a56ce994b524cd23e1aa}{}\label{jouer_8h_a5bd3b2cfb590a56ce994b524cd23e1aa}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a5bd3b2cfb590a56ce994b524cd23e1aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Afficher\+\_\+perso@{Afficher\+\_\+perso}}
+\index{Afficher\+\_\+perso@{Afficher\+\_\+perso}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Afficher\+\_\+perso(\+Player hero, int vie, S\+D\+L\+\_\+\+Surface $\ast$ecran)}{Afficher_perso(Player hero, int vie, SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void Afficher\+\_\+perso (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{hero, }
+\item[{int}]{vie, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aadd479ddab8191523cfee947e8a718b1}{}\label{jouer_8h_aadd479ddab8191523cfee947e8a718b1}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_aadd479ddab8191523cfee947e8a718b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!afficherobjet@{afficherobjet}}
+\index{afficherobjet@{afficherobjet}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{afficherobjet(\+E\+O $\ast$ob, E\+O $\ast$clef, E\+O $\ast$porte, E\+O $\ast$piste, S\+D\+L\+\_\+\+Surface $\ast$ecran, background $\ast$b)}{afficherobjet(EO *ob, EO *clef, EO *porte, EO *piste, SDL_Surface *ecran, background *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void afficherobjet (
+\begin{DoxyParamCaption}
+\item[{{\bf EO} $\ast$}]{ob, }
+\item[{{\bf EO} $\ast$}]{clef, }
+\item[{{\bf EO} $\ast$}]{porte, }
+\item[{{\bf EO} $\ast$}]{piste, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{{\bf background} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a42cab3047c025df170f86a167a498c40}{}\label{jouer_8h_a42cab3047c025df170f86a167a498c40}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a42cab3047c025df170f86a167a498c40_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Animer\+\_\+\+Personnage@{Animer\+\_\+\+Personnage}}
+\index{Animer\+\_\+\+Personnage@{Animer\+\_\+\+Personnage}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Animer\+\_\+\+Personnage(int $\ast$frametime, int nmb\+\_\+frame, int $\ast$frame, Player $\ast$hero, Direction $\ast$\+Sens, Etat $\ast$\+State)}{Animer_Personnage(int *frametime, int nmb_frame, int *frame, Player *hero, Direction *Sens, Etat *State)}}]{\setlength{\rightskip}{0pt plus 5cm}void Animer\+\_\+\+Personnage (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{frametime, }
+\item[{int}]{nmb\+\_\+frame, }
+\item[{int $\ast$}]{frame, }
+\item[{{\bf Player} $\ast$}]{hero, }
+\item[{{\bf Direction} $\ast$}]{Sens, }
+\item[{{\bf Etat} $\ast$}]{State}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a3dc3993bdcecc71ad5576c072f25e29d}{}\label{jouer_8h_a3dc3993bdcecc71ad5576c072f25e29d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a3dc3993bdcecc71ad5576c072f25e29d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!arduino\+Read\+Data@{arduino\+Read\+Data}}
+\index{arduino\+Read\+Data@{arduino\+Read\+Data}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{arduino\+Read\+Data(int $\ast$x)}{arduinoReadData(int *x)}}]{\setlength{\rightskip}{0pt plus 5cm}int arduino\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_af26975b0e6c2018b62f8f188392ffba8}{}\label{jouer_8h_af26975b0e6c2018b62f8f188392ffba8}
+\index{jouer.\+h@{jouer.\+h}!arduino\+Write\+Data@{arduino\+Write\+Data}}
+\index{arduino\+Write\+Data@{arduino\+Write\+Data}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{arduino\+Write\+Data(int w)}{arduinoWriteData(int w)}}]{\setlength{\rightskip}{0pt plus 5cm}int arduino\+Write\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a34cbc014d36b81852811368db4a70a98}{}\label{jouer_8h_a34cbc014d36b81852811368db4a70a98}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a34cbc014d36b81852811368db4a70a98_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!collision@{collision}}
+\index{collision@{collision}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{collision(\+S\+D\+L\+\_\+\+Surface $\ast$p, S\+D\+L\+\_\+\+Surface $\ast$e, S\+D\+L\+\_\+\+Rect perso, S\+D\+L\+\_\+\+Rect enemy)}{collision(SDL_Surface *p, SDL_Surface *e, SDL_Rect perso, SDL_Rect enemy)}}]{\setlength{\rightskip}{0pt plus 5cm}int collision (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{p, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{e, }
+\item[{S\+D\+L\+\_\+\+Rect}]{perso, }
+\item[{S\+D\+L\+\_\+\+Rect}]{enemy}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aaf6f1dec5bb7d4e93d8d580a8e550442}{}\label{jouer_8h_aaf6f1dec5bb7d4e93d8d580a8e550442}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{jouer_8h_aaf6f1dec5bb7d4e93d8d580a8e550442_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_aaf6f1dec5bb7d4e93d8d580a8e550442_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Collision\+\_\+\+Ennemi@{Collision\+\_\+\+Ennemi}}
+\index{Collision\+\_\+\+Ennemi@{Collision\+\_\+\+Ennemi}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+\_\+\+Ennemi(\+S\+D\+L\+\_\+\+Rect Pos\+\_\+perso, Ennemi Mob)}{Collision_Ennemi(SDL_Rect Pos_perso, Ennemi Mob)}}]{\setlength{\rightskip}{0pt plus 5cm}int Collision\+\_\+\+Ennemi (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Rect}]{Pos\+\_\+perso, }
+\item[{{\bf Ennemi}}]{Mob}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aa7a006f89e162da81cf20be078bf3653}{}\label{jouer_8h_aa7a006f89e162da81cf20be078bf3653}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{jouer_8h_aa7a006f89e162da81cf20be078bf3653_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_aa7a006f89e162da81cf20be078bf3653_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!collisionall@{collisionall}}
+\index{collisionall@{collisionall}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{collisionall(\+E\+O $\ast$ob, E\+O clef, E\+O porte, E\+O piste, Player $\ast$hero, int $\ast$vie, int $\ast$score, Direction Sens, Etat State, Ennemi Mob[], Coordinate C, S\+D\+L\+\_\+\+Surface $\ast$\+Background)}{collisionall(EO *ob, EO clef, EO porte, EO piste, Player *hero, int *vie, int *score, Direction Sens, Etat State, Ennemi Mob[], Coordinate C, SDL_Surface *Background)}}]{\setlength{\rightskip}{0pt plus 5cm}int collisionall (
+\begin{DoxyParamCaption}
+\item[{{\bf EO} $\ast$}]{ob, }
+\item[{{\bf EO}}]{clef, }
+\item[{{\bf EO}}]{porte, }
+\item[{{\bf EO}}]{piste, }
+\item[{{\bf Player} $\ast$}]{hero, }
+\item[{int $\ast$}]{vie, }
+\item[{int $\ast$}]{score, }
+\item[{{\bf Direction}}]{Sens, }
+\item[{{\bf Etat}}]{State, }
+\item[{{\bf Ennemi}}]{Mob\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Coordinate}}]{C, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{Background}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a1201e4f88c0ee7608ca131ce01681997}{}\label{jouer_8h_a1201e4f88c0ee7608ca131ce01681997}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a1201e4f88c0ee7608ca131ce01681997_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a1201e4f88c0ee7608ca131ce01681997_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!collisionbox@{collisionbox}}
+\index{collisionbox@{collisionbox}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{collisionbox(\+S\+D\+L\+\_\+\+Surface $\ast$p, S\+D\+L\+\_\+\+Surface $\ast$o, S\+D\+L\+\_\+\+Rect perso, S\+D\+L\+\_\+\+Rect objet)}{collisionbox(SDL_Surface *p, SDL_Surface *o, SDL_Rect perso, SDL_Rect objet)}}]{\setlength{\rightskip}{0pt plus 5cm}int collisionbox (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{p, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{o, }
+\item[{S\+D\+L\+\_\+\+Rect}]{perso, }
+\item[{S\+D\+L\+\_\+\+Rect}]{objet}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aada0004db077b368ab0b29a7f0e74d72}{}\label{jouer_8h_aada0004db077b368ab0b29a7f0e74d72}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{jouer_8h_aada0004db077b368ab0b29a7f0e74d72_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_aada0004db077b368ab0b29a7f0e74d72_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!deplacement@{deplacement}}
+\index{deplacement@{deplacement}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{deplacement(\+Direction Sens, Etat State, Player $\ast$hero, int $\ast$keys\+Held)}{deplacement(Direction Sens, Etat State, Player *hero, int *keysHeld)}}]{\setlength{\rightskip}{0pt plus 5cm}void deplacement (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{Sens, }
+\item[{{\bf Etat}}]{State, }
+\item[{{\bf Player} $\ast$}]{hero, }
+\item[{int $\ast$}]{keys\+Held}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aff1748dab6c55558808b6a23b947f974}{}\label{jouer_8h_aff1748dab6c55558808b6a23b947f974}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_aff1748dab6c55558808b6a23b947f974_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!enigme@{enigme}}
+\index{enigme@{enigme}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{enigme(int d, S\+D\+L\+\_\+\+Surface $\ast$ecran)}{enigme(int d, SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void enigme (
+\begin{DoxyParamCaption}
+\item[{int}]{d, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a17f70e17a66034ab2cfe4ecd23d0a96a}{}\label{jouer_8h_a17f70e17a66034ab2cfe4ecd23d0a96a}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a17f70e17a66034ab2cfe4ecd23d0a96a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!event\+\_\+handler@{event\+\_\+handler}}
+\index{event\+\_\+handler@{event\+\_\+handler}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{event\+\_\+handler(\+S\+D\+L\+\_\+\+Event event, Direction $\ast$\+Sens, Etat $\ast$\+State, int $\ast$keys\+Held)}{event_handler(SDL_Event event, Direction *Sens, Etat *State, int *keysHeld)}}]{\setlength{\rightskip}{0pt plus 5cm}void event\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Event}]{event, }
+\item[{{\bf Direction} $\ast$}]{Sens, }
+\item[{{\bf Etat} $\ast$}]{State, }
+\item[{int $\ast$}]{keys\+Held}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a72fcd39f3658ec12884bd69a639359ee}{}\label{jouer_8h_a72fcd39f3658ec12884bd69a639359ee}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a72fcd39f3658ec12884bd69a639359ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!good@{good}}
+\index{good@{good}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{good(\+S\+D\+L\+\_\+\+Surface $\ast$ecran)}{good(SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void good (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a7dd2f18aee0b8b5e643a0817ad685d34}{}\label{jouer_8h_a7dd2f18aee0b8b5e643a0817ad685d34}
+\index{jouer.\+h@{jouer.\+h}!Init\+\_\+\+Ennemi@{Init\+\_\+\+Ennemi}}
+\index{Init\+\_\+\+Ennemi@{Init\+\_\+\+Ennemi}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Init\+\_\+\+Ennemi(char Mob\+\_\+\+Name[], int X, int Y)}{Init_Ennemi(char Mob_Name[], int X, int Y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ennemi} Init\+\_\+\+Ennemi (
+\begin{DoxyParamCaption}
+\item[{char}]{Mob\+\_\+\+Name\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{X, }
+\item[{int}]{Y}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_acc0a5eae1c2488e30bf55a4b064cc833}{}\label{jouer_8h_acc0a5eae1c2488e30bf55a4b064cc833}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_acc0a5eae1c2488e30bf55a4b064cc833_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Initial\+\_\+objet@{Initial\+\_\+objet}}
+\index{Initial\+\_\+objet@{Initial\+\_\+objet}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Initial\+\_\+objet(\+E\+O $\ast$ob, E\+O $\ast$clef, E\+O $\ast$porte, E\+O $\ast$piste)}{Initial_objet(EO *ob, EO *clef, EO *porte, EO *piste)}}]{\setlength{\rightskip}{0pt plus 5cm}void Initial\+\_\+objet (
+\begin{DoxyParamCaption}
+\item[{{\bf EO} $\ast$}]{ob, }
+\item[{{\bf EO} $\ast$}]{clef, }
+\item[{{\bf EO} $\ast$}]{porte, }
+\item[{{\bf EO} $\ast$}]{piste}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a86f775c18541dd59fc0bd67da6884963}{}\label{jouer_8h_a86f775c18541dd59fc0bd67da6884963}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a86f775c18541dd59fc0bd67da6884963_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Initial\+\_\+personnage@{Initial\+\_\+personnage}}
+\index{Initial\+\_\+personnage@{Initial\+\_\+personnage}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Initial\+\_\+personnage()}{Initial_personnage()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} Initial\+\_\+personnage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a7fcb81f452dcbccb499a3ce85062d589}{}\label{jouer_8h_a7fcb81f452dcbccb499a3ce85062d589}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a7fcb81f452dcbccb499a3ce85062d589_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{initialiser(background $\ast$b)}{initialiser(background *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void initialiser (
+\begin{DoxyParamCaption}
+\item[{{\bf background} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a627e8dbcc77f69a29241e6dccf38d77d}{}\label{jouer_8h_a627e8dbcc77f69a29241e6dccf38d77d}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a627e8dbcc77f69a29241e6dccf38d77d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!jouer@{jouer}}
+\index{jouer@{jouer}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{jouer(\+S\+D\+L\+\_\+\+Surface $\ast$ecran)}{jouer(SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void jouer (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_ad213c186f0cdc96ff9980238c752ac7c}{}\label{jouer_8h_ad213c186f0cdc96ff9980238c752ac7c}
+\index{jouer.\+h@{jouer.\+h}!mvtaleatoire@{mvtaleatoire}}
+\index{mvtaleatoire@{mvtaleatoire}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{mvtaleatoire(\+Ennemi $\ast$mob, int max, int min)}{mvtaleatoire(Ennemi *mob, int max, int min)}}]{\setlength{\rightskip}{0pt plus 5cm}void mvtaleatoire (
+\begin{DoxyParamCaption}
+\item[{{\bf Ennemi} $\ast$}]{mob, }
+\item[{int}]{max, }
+\item[{int}]{min}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_afc8b6113658127f5da2f173a2f07d697}{}\label{jouer_8h_afc8b6113658127f5da2f173a2f07d697}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_afc8b6113658127f5da2f173a2f07d697_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!Nettoyer\+\_\+stage@{Nettoyer\+\_\+stage}}
+\index{Nettoyer\+\_\+stage@{Nettoyer\+\_\+stage}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{Nettoyer\+\_\+stage(\+S\+D\+L\+\_\+\+Surface $\ast$ecran)}{Nettoyer_stage(SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nettoyer\+\_\+stage (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a9104e461369cd1360ebfae450d4a49e6}{}\label{jouer_8h_a9104e461369cd1360ebfae450d4a49e6}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jouer_8h_a9104e461369cd1360ebfae450d4a49e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{jouer.\+h@{jouer.\+h}!quiz@{quiz}}
+\index{quiz@{quiz}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{quiz(\+S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)}{quiz(SDL_Surface *ecran, int d)}}]{\setlength{\rightskip}{0pt plus 5cm}void quiz (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_aec72a4538c45c4b123f92b3aa554980a}{}\label{jouer_8h_aec72a4538c45c4b123f92b3aa554980a}
+\index{jouer.\+h@{jouer.\+h}!reponse@{reponse}}
+\index{reponse@{reponse}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{reponse(\+S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)}{reponse(SDL_Surface *ecran, int d)}}]{\setlength{\rightskip}{0pt plus 5cm}void reponse (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a313b3d1a9789026d9311ce31218dfddc}{}\label{jouer_8h_a313b3d1a9789026d9311ce31218dfddc}
+\index{jouer.\+h@{jouer.\+h}!scrolling@{scrolling}}
+\index{scrolling@{scrolling}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{scrolling(background $\ast$b, S\+D\+L\+\_\+\+Surface $\ast$ecran, Direction Sens, Etat State)}{scrolling(background *b, SDL_Surface *ecran, Direction Sens, Etat State)}}]{\setlength{\rightskip}{0pt plus 5cm}void scrolling (
+\begin{DoxyParamCaption}
+\item[{{\bf background} $\ast$}]{b, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{{\bf Direction}}]{Sens, }
+\item[{{\bf Etat}}]{State}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a81c2e8441b67355bf2c68a5c0fa4d2d6}{}\label{jouer_8h_a81c2e8441b67355bf2c68a5c0fa4d2d6}
+\index{jouer.\+h@{jouer.\+h}!solution@{solution}}
+\index{solution@{solution}!jouer.\+h@{jouer.\+h}}
+\subsubsection[{\texorpdfstring{solution(\+S\+D\+L\+\_\+\+Surface $\ast$ecran, int d)}{solution(SDL_Surface *ecran, int d)}}]{\setlength{\rightskip}{0pt plus 5cm}void solution (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{jouer_8h_a2774260562b0dca66057190a74a45edb}{}\label{jouer_8h_a2774260562b0dca66057190a74a45edb}

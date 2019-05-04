@@ -1,0 +1,6 @@
+<map id="arduinoWriteData" name="arduinoWriteData">
+<area shape="rect" id="node2" href="$jouer_8h.html#a1201e4f88c0ee7608ca131ce01681997" title="collisionall" alt="" coords="176,29,259,56"/>
+<area shape="rect" id="node3" href="$main_8h.html#ad213c186f0cdc96ff9980238c752ac7c" title="jouer" alt="" coords="307,29,357,56"/>
+<area shape="rect" id="node4" href="$main_8h.html#ad059f5084a6fceece8f6fb51a6d4648a" title="main" alt="" coords="405,29,456,56"/>
+<area shape="rect" id="node5" href="$options_8h.html#a204b8f657e1bc7a81e3974398e9b6329" title="choix_options" alt="" coords="504,29,607,56"/>
+</map>

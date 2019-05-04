@@ -1,0 +1,5 @@
+<map id="manette.h" name="manette.h">
+<area shape="rect" id="node2" href="$collision_8c.html" title="collision.c" alt="" coords="5,80,85,107"/>
+<area shape="rect" id="node3" href="$manette_8c.html" title="manette.c" alt="" coords="109,80,189,107"/>
+<area shape="rect" id="node4" href="$perso_8c.html" title="perso.c" alt="" coords="214,80,279,107"/>
+</map>

@@ -1,0 +1,37 @@
+<map id="jouer" name="jouer">
+<area shape="rect" id="node2" href="$Init__Ennemi_8c.html#acc0a5eae1c2488e30bf55a4b064cc833" title="Init_Ennemi" alt="" coords="406,75,497,102"/>
+<area shape="rect" id="node3" href="$jouer_8h.html#a7fcb81f452dcbccb499a3ce85062d589" title="Initial_personnage" alt="" coords="388,126,515,153"/>
+<area shape="rect" id="node4" href="$initialiser__background_8c.html#a627e8dbcc77f69a29241e6dccf38d77d" title="initialiser" alt="" coords="415,177,488,203"/>
+<area shape="rect" id="node5" href="$jouer_8c.html#a9104e461369cd1360ebfae450d4a49e6" title="Nettoyer_stage" alt="" coords="396,227,507,254"/>
+<area shape="rect" id="node6" href="$main_8c.html#ad059f5084a6fceece8f6fb51a6d4648a" title="main" alt="" coords="104,974,155,1001"/>
+<area shape="rect" id="node14" href="$afficher__background_8c.html#ad5e245ac884b3a5bc774dca864a5e0c0" title="afficher" alt="" coords="419,278,484,305"/>
+<area shape="rect" id="node15" href="$initialiser__ojbets_8c.html#a86f775c18541dd59fc0bd67da6884963" title="Initial_objet" alt="" coords="407,329,495,355"/>
+<area shape="rect" id="node16" href="$Afficher__objets_8c.html#a42cab3047c025df170f86a167a498c40" title="afficherobjet" alt="" coords="405,379,498,406"/>
+<area shape="rect" id="node17" href="$collision_8c.html#a1201e4f88c0ee7608ca131ce01681997" title="collisionall" alt="" coords="410,835,493,862"/>
+<area shape="rect" id="node18" href="$jouer_8h.html#a17f70e17a66034ab2cfe4ecd23d0a96a" title="enigme" alt="" coords="622,531,686,558"/>
+<area shape="rect" id="node25" href="$jouer_8h.html#a72fcd39f3658ec12884bd69a639359ee" title="event_handler" alt="" coords="400,430,503,457"/>
+<area shape="rect" id="node26" href="$jouer_8h.html#aff1748dab6c55558808b6a23b947f974" title="deplacement" alt="" coords="403,481,499,507"/>
+<area shape="rect" id="node27" href="$Animer__Personnage_8c.html#a3dc3993bdcecc71ad5576c072f25e29d" title="Animer_Personnage" alt="" coords="382,582,521,609"/>
+<area shape="rect" id="node28" href="$jouer_8h.html#aadd479ddab8191523cfee947e8a718b1" title="Afficher_perso" alt="" coords="398,633,505,659"/>
+<area shape="rect" id="node29" href="$quiz_8h.html#af872df93192ceb6d726090c6801d0127" title="init_images" alt="" coords="407,683,495,710"/>
+<area shape="rect" id="node30" href="$jouer_8h.html#afc8b6113658127f5da2f173a2f07d697" title="mvtaleatoire" alt="" coords="405,734,498,761"/>
+<area shape="rect" id="node31" href="$Afficher__Ennemi_8c.html#a5bd3b2cfb590a56ce994b524cd23e1aa" title="Afficher_Ennemi" alt="" coords="392,785,511,811"/>
+<area shape="rect" id="node7" href="$Init__Ennemi1_8c.html#a21ded47b333fb3f6a0dd9105ec8e0209" title="Init_Ennemi1" alt="" coords="214,1062,313,1089"/>
+<area shape="rect" id="node8" href="$main_8c.html#ac0c4d942ba04a8fa152a1168e15a1d4e" title="Init_Anim" alt="" coords="225,1113,302,1139"/>
+<area shape="rect" id="node9" href="$main_8c.html#aef464569428f0b4a803c83675d8e4c18" title="SDL_LireCouleur" alt="" coords="203,1163,324,1190"/>
+<area shape="rect" id="node11" href="$main_8c.html#afd139978ad08eb2ad3e3a9e5b5bfa49b" title="get_position" alt="" coords="217,886,309,913"/>
+<area shape="rect" id="node12" href="$main_8c.html#acc6e60922b333ad1b338e8c1e8183b96" title="Nettoyer" alt="" coords="227,937,299,963"/>
+<area shape="rect" id="node13" href="$jouer_8c.html#ad213c186f0cdc96ff9980238c752ac7c" title="jouer" alt="" coords="238,531,289,558"/>
+<area shape="rect" id="node32" href="$options_8c.html#a204b8f657e1bc7a81e3974398e9b6329" title="choix_options" alt="" coords="212,1011,315,1038"/>
+<area shape="rect" id="node10" href="$main_8c.html#aba2bc09df0eb876fbf63480686f330c3" title="SDL_LireCouleurAux" alt="" coords="379,1163,523,1190"/>
+<area shape="rect" id="node19" href="$collision__bounding__box_8c.html#aaf6f1dec5bb7d4e93d8d580a8e550442" title="collision" alt="" coords="777,854,847,881"/>
+<area shape="rect" id="node20" href="$Collision__trigo_8c.html#aa7a006f89e162da81cf20be078bf3653" title="Collision_Ennemi" alt="" coords="593,879,715,906"/>
+<area shape="rect" id="node21" href="$collision__bounding__box_8c.html#aada0004db077b368ab0b29a7f0e74d72" title="collisionbox" alt="" coords="609,778,699,805"/>
+<area shape="rect" id="node22" href="$Perfect__Collision_8c.html#a3020d18687b9b653f5faf2bc7dce1a04" title="Collision_Parfaite" alt="" coords="592,930,716,957"/>
+<area shape="rect" id="node24" href="$jouer_8h.html#a34cbc014d36b81852811368db4a70a98" title="arduinoWriteData" alt="" coords="593,727,715,754"/>
+<area shape="rect" id="node23" href="$Perfect__Collision_8c.html#a5d7d9b111644c79dcef217c6dad13f50" title="getpixel" alt="" coords="779,930,845,957"/>
+<area shape="rect" id="node33" href="$options_8c.html#ae7387b70d0a60bea23d9f177344d8e5c" title="SDL_LireCouleurg" alt="" coords="387,967,515,994"/>
+<area shape="rect" id="node35" href="$options_8c.html#a9d0945a56758c6b9a188472214f09aa2" title="get_positiong" alt="" coords="402,1018,501,1045"/>
+<area shape="rect" id="node36" href="$options_8c.html#ac4b5e53478a2d27036fd0a8d74d45c3f" title="Nettoyer_choix_options" alt="" coords="372,1069,531,1095"/>
+<area shape="rect" id="node34" href="$options_8c.html#a7c673dadafe42a8532f0120ea8ebcc6d" title="SDL_LireCouleurAuxg" alt="" coords="579,981,729,1007"/>
+</map>

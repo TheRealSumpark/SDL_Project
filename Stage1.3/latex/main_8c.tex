@@ -1,0 +1,187 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__CouleurRGB__}{\+\_\+\+Couleur\+R\+G\+B\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__CouleurRGB__}{\+\_\+\+Couleur\+R\+G\+B\+\_\+} \hyperlink{main_8c_a0d1ab7da293d398c90fff3a60f6adf56}{\+\_\+\+Couleur\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \hyperlink{main_8c_aba2bc09df0eb876fbf63480686f330c3}{S\+D\+L\+\_\+\+Lire\+Couleur\+Aux} (S\+D\+L\+\_\+\+Surface $\ast$surface, int x, int y)
+\item 
+int \hyperlink{main_8c_afd139978ad08eb2ad3e3a9e5b5bfa49b}{get\+\_\+position} (\hyperlink{main_8c_a0d1ab7da293d398c90fff3a60f6adf56}{\+\_\+\+Couleur\+\_\+} couleur)
+\item 
+\hyperlink{main_8c_a0d1ab7da293d398c90fff3a60f6adf56}{\+\_\+\+Couleur\+\_\+} \hyperlink{main_8c_aef464569428f0b4a803c83675d8e4c18}{S\+D\+L\+\_\+\+Lire\+Couleur} (S\+D\+L\+\_\+\+Surface $\ast$surface, int x, int y)
+\item 
+void \hyperlink{main_8c_ad059f5084a6fceece8f6fb51a6d4648a}{main} (S\+D\+L\+\_\+\+Surface $\ast$screen)
+\item 
+void \hyperlink{main_8c_acc6e60922b333ad1b338e8c1e8183b96}{Nettoyer} (S\+D\+L\+\_\+\+Surface $\ast$\hyperlink{structbackground}{background})
+\item 
+\hyperlink{structanim}{anim} \hyperlink{main_8c_ac0c4d942ba04a8fa152a1168e15a1d4e}{Init\+\_\+\+Anim} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{main.\+c@{main.\+c}!\+\_\+\+Couleur\+\_\+@{\+\_\+\+Couleur\+\_\+}}
+\index{\+\_\+\+Couleur\+\_\+@{\+\_\+\+Couleur\+\_\+}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Couleur\+\_\+}{_Couleur_}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Couleur\+R\+G\+B\+\_\+}  {\bf \+\_\+\+Couleur\+\_\+}}\hypertarget{main_8c_a0d1ab7da293d398c90fff3a60f6adf56}{}\label{main_8c_a0d1ab7da293d398c90fff3a60f6adf56}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!get\+\_\+position@{get\+\_\+position}}
+\index{get\+\_\+position@{get\+\_\+position}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+position(\+\_\+\+Couleur\+\_\+ couleur)}{get_position(_Couleur_ couleur)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+position (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+Couleur\+\_\+}}]{couleur}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_afd139978ad08eb2ad3e3a9e5b5bfa49b}{}\label{main_8c_afd139978ad08eb2ad3e3a9e5b5bfa49b}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{main_8c_afd139978ad08eb2ad3e3a9e5b5bfa49b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!Init\+\_\+\+Anim@{Init\+\_\+\+Anim}}
+\index{Init\+\_\+\+Anim@{Init\+\_\+\+Anim}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{Init\+\_\+\+Anim()}{Init_Anim()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf anim} Init\+\_\+\+Anim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ac0c4d942ba04a8fa152a1168e15a1d4e}{}\label{main_8c_ac0c4d942ba04a8fa152a1168e15a1d4e}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{main_8c_ac0c4d942ba04a8fa152a1168e15a1d4e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(\+S\+D\+L\+\_\+\+Surface $\ast$screen)}{main(SDL_Surface *screen)}}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ad059f5084a6fceece8f6fb51a6d4648a}{}\label{main_8c_ad059f5084a6fceece8f6fb51a6d4648a}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ad059f5084a6fceece8f6fb51a6d4648a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ad059f5084a6fceece8f6fb51a6d4648a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!Nettoyer@{Nettoyer}}
+\index{Nettoyer@{Nettoyer}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{Nettoyer(\+S\+D\+L\+\_\+\+Surface $\ast$background)}{Nettoyer(SDL_Surface *background)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nettoyer (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{background}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_acc6e60922b333ad1b338e8c1e8183b96}{}\label{main_8c_acc6e60922b333ad1b338e8c1e8183b96}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{main_8c_acc6e60922b333ad1b338e8c1e8183b96_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!S\+D\+L\+\_\+\+Lire\+Couleur@{S\+D\+L\+\_\+\+Lire\+Couleur}}
+\index{S\+D\+L\+\_\+\+Lire\+Couleur@{S\+D\+L\+\_\+\+Lire\+Couleur}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+\_\+\+Lire\+Couleur(\+S\+D\+L\+\_\+\+Surface $\ast$surface, int x, int y)}{SDL_LireCouleur(SDL_Surface *surface, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+Couleur\+\_\+} S\+D\+L\+\_\+\+Lire\+Couleur (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{surface, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aef464569428f0b4a803c83675d8e4c18}{}\label{main_8c_aef464569428f0b4a803c83675d8e4c18}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{main_8c_aef464569428f0b4a803c83675d8e4c18_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_aef464569428f0b4a803c83675d8e4c18_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!S\+D\+L\+\_\+\+Lire\+Couleur\+Aux@{S\+D\+L\+\_\+\+Lire\+Couleur\+Aux}}
+\index{S\+D\+L\+\_\+\+Lire\+Couleur\+Aux@{S\+D\+L\+\_\+\+Lire\+Couleur\+Aux}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+\_\+\+Lire\+Couleur\+Aux(\+S\+D\+L\+\_\+\+Surface $\ast$surface, int x, int y)}{SDL_LireCouleurAux(SDL_Surface *surface, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 S\+D\+L\+\_\+\+Lire\+Couleur\+Aux (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{surface, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aba2bc09df0eb876fbf63480686f330c3}{}\label{main_8c_aba2bc09df0eb876fbf63480686f330c3}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_aba2bc09df0eb876fbf63480686f330c3_icgraph}
+\end{center}
+\end{figure}
+
+

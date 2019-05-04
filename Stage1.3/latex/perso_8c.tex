@@ -1,0 +1,113 @@
+\hypertarget{perso_8c}{}\section{perso.\+c File Reference}
+\label{perso_8c}\index{perso.\+c@{perso.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}perso.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}manette.\+h\char`\"{}}\\*
+Include dependency graph for perso.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{perso_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structPlayer}{Player} \hyperlink{perso_8c_a7fcb81f452dcbccb499a3ce85062d589}{Initial\+\_\+personnage} ()
+\item 
+void \hyperlink{perso_8c_aadd479ddab8191523cfee947e8a718b1}{Afficher\+\_\+perso} (\hyperlink{structPlayer}{Player} hero, int vie, S\+D\+L\+\_\+\+Surface $\ast$ecran)
+\item 
+void \hyperlink{perso_8c_a72fcd39f3658ec12884bd69a639359ee}{event\+\_\+handler} (S\+D\+L\+\_\+\+Event event, \hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} $\ast$Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} $\ast$State, int $\ast$keys\+Held)
+\item 
+void \hyperlink{perso_8c_aff1748dab6c55558808b6a23b947f974}{deplacement} (\hyperlink{jouer_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} Sens, \hyperlink{jouer_8h_a767b7a63d7677f92d697621b4166af1b}{Etat} State, \hyperlink{structPlayer}{Player} $\ast$hero, int $\ast$keys\+Held)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{perso.\+c@{perso.\+c}!Afficher\+\_\+perso@{Afficher\+\_\+perso}}
+\index{Afficher\+\_\+perso@{Afficher\+\_\+perso}!perso.\+c@{perso.\+c}}
+\subsubsection[{\texorpdfstring{Afficher\+\_\+perso(\+Player hero, int vie, S\+D\+L\+\_\+\+Surface $\ast$ecran)}{Afficher_perso(Player hero, int vie, SDL_Surface *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void Afficher\+\_\+perso (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{hero, }
+\item[{int}]{vie, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{perso_8c_aadd479ddab8191523cfee947e8a718b1}{}\label{perso_8c_aadd479ddab8191523cfee947e8a718b1}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{perso_8c_aadd479ddab8191523cfee947e8a718b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{perso.\+c@{perso.\+c}!deplacement@{deplacement}}
+\index{deplacement@{deplacement}!perso.\+c@{perso.\+c}}
+\subsubsection[{\texorpdfstring{deplacement(\+Direction Sens, Etat State, Player $\ast$hero, int $\ast$keys\+Held)}{deplacement(Direction Sens, Etat State, Player *hero, int *keysHeld)}}]{\setlength{\rightskip}{0pt plus 5cm}void deplacement (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{Sens, }
+\item[{{\bf Etat}}]{State, }
+\item[{{\bf Player} $\ast$}]{hero, }
+\item[{int $\ast$}]{keys\+Held}
+\end{DoxyParamCaption}
+)}\hypertarget{perso_8c_aff1748dab6c55558808b6a23b947f974}{}\label{perso_8c_aff1748dab6c55558808b6a23b947f974}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{perso_8c_aff1748dab6c55558808b6a23b947f974_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{perso.\+c@{perso.\+c}!event\+\_\+handler@{event\+\_\+handler}}
+\index{event\+\_\+handler@{event\+\_\+handler}!perso.\+c@{perso.\+c}}
+\subsubsection[{\texorpdfstring{event\+\_\+handler(\+S\+D\+L\+\_\+\+Event event, Direction $\ast$\+Sens, Etat $\ast$\+State, int $\ast$keys\+Held)}{event_handler(SDL_Event event, Direction *Sens, Etat *State, int *keysHeld)}}]{\setlength{\rightskip}{0pt plus 5cm}void event\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Event}]{event, }
+\item[{{\bf Direction} $\ast$}]{Sens, }
+\item[{{\bf Etat} $\ast$}]{State, }
+\item[{int $\ast$}]{keys\+Held}
+\end{DoxyParamCaption}
+)}\hypertarget{perso_8c_a72fcd39f3658ec12884bd69a639359ee}{}\label{perso_8c_a72fcd39f3658ec12884bd69a639359ee}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{perso_8c_a72fcd39f3658ec12884bd69a639359ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{perso.\+c@{perso.\+c}!Initial\+\_\+personnage@{Initial\+\_\+personnage}}
+\index{Initial\+\_\+personnage@{Initial\+\_\+personnage}!perso.\+c@{perso.\+c}}
+\subsubsection[{\texorpdfstring{Initial\+\_\+personnage()}{Initial_personnage()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} Initial\+\_\+personnage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{perso_8c_a7fcb81f452dcbccb499a3ce85062d589}{}\label{perso_8c_a7fcb81f452dcbccb499a3ce85062d589}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{perso_8c_a7fcb81f452dcbccb499a3ce85062d589_icgraph}
+\end{center}
+\end{figure}
+
+

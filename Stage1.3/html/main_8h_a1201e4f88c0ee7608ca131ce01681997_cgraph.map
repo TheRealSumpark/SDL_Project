@@ -1,0 +1,8 @@
+<map id="collisionall" name="collisionall">
+<area shape="rect" id="node2" href="$main_8h.html#a17f70e17a66034ab2cfe4ecd23d0a96a" title="enigme" alt="" coords="166,5,230,32"/>
+<area shape="rect" id="node3" href="$collision__bounding__box_8c.html#aaf6f1dec5bb7d4e93d8d580a8e550442" title="collision" alt="" coords="308,132,377,159"/>
+<area shape="rect" id="node4" href="$Collision__trigo_8c.html#aa7a006f89e162da81cf20be078bf3653" title="Collision_Ennemi" alt="" coords="137,107,259,133"/>
+<area shape="rect" id="node5" href="$collision__bounding__box_8c.html#aada0004db077b368ab0b29a7f0e74d72" title="collisionbox" alt="" coords="153,157,243,184"/>
+<area shape="rect" id="node6" href="$Perfect__Collision_8c.html#a3020d18687b9b653f5faf2bc7dce1a04" title="Collision_Parfaite" alt="" coords="136,208,260,235"/>
+<area shape="rect" id="node7" href="$Perfect__Collision_8c.html#a5d7d9b111644c79dcef217c6dad13f50" title="getpixel" alt="" coords="309,208,376,235"/>
+</map>

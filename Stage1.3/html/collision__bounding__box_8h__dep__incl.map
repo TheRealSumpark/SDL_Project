@@ -1,0 +1,35 @@
+<map id="collision_bounding_box.h" name="collision_bounding_box.h">
+<area shape="rect" id="node2" href="$jouer_8h.html" title="jouer.h" alt="" coords="787,102,849,129"/>
+<area shape="rect" id="node8" href="$collision_8c.html" title="collision.c" alt="" coords="1502,259,1582,285"/>
+<area shape="rect" id="node34" href="$collision__bounding__box_8c.html" title="collision_bounding\l_box.c" alt="" coords="2021,95,2149,136"/>
+<area shape="rect" id="node3" href="$afficher__background_8c.html" title="afficher_background.c" alt="" coords="1795,184,1945,211"/>
+<area shape="rect" id="node4" href="$Init__Ennemi_8h.html" title="Init_Ennemi.h" alt="" coords="133,184,236,211"/>
+<area shape="rect" id="node5" href="$Init__Ennemi_8c.html" title="Init_Ennemi.c" alt="" coords="5,259,108,285"/>
+<area shape="rect" id="node6" href="$Afficher__Ennemi_8h.html" title="Afficher_Ennemi.h" alt="" coords="607,184,736,211"/>
+<area shape="rect" id="node9" href="$mvtaleatoire_8h.html" title="mvtaleatoire.h" alt="" coords="311,184,415,211"/>
+<area shape="rect" id="node11" href="$main_8h.html" title="main.h" alt="" coords="439,184,501,211"/>
+<area shape="rect" id="node20" href="$Collision__trigo_8h.html" title="Collision_trigo.h" alt="" coords="761,184,875,211"/>
+<area shape="rect" id="node22" href="$quiz_8h.html" title="quiz.h" alt="" coords="525,184,583,211"/>
+<area shape="rect" id="node24" href="$Afficher__objets_8c.html" title="Afficher_objets.c" alt="" coords="950,184,1070,211"/>
+<area shape="rect" id="node25" href="$Animer__Personnage_8c.html" title="Animer_Personnage.c" alt="" coords="1095,184,1245,211"/>
+<area shape="rect" id="node26" href="$Perfect__Collision_8h.html" title="Perfect_Collision.h" alt="" coords="2021,184,2153,211"/>
+<area shape="rect" id="node28" href="$manette_8h.html" title="manette.h" alt="" coords="2178,184,2258,211"/>
+<area shape="rect" id="node30" href="$initialiser__background_8c.html" title="initialiser_background.c" alt="" coords="1269,184,1428,211"/>
+<area shape="rect" id="node31" href="$initialiser__ojbets_8c.html" title="initialiser_ojbets.c" alt="" coords="1452,184,1579,211"/>
+<area shape="rect" id="node32" href="$jouer_8c.html" title="Testing Program. " alt="" coords="1603,184,1665,211"/>
+<area shape="rect" id="node33" href="$scrolling_8c.html" title="scrolling.c" alt="" coords="1689,184,1771,211"/>
+<area shape="rect" id="node7" href="$Afficher__Ennemi_8c.html" title="Afficher_Ennemi.c" alt="" coords="749,259,879,285"/>
+<area shape="rect" id="node10" href="$mvtaleatoire_8c.html" title="mvtaleatoire.c" alt="" coords="133,259,237,285"/>
+<area shape="rect" id="node12" href="$options_8h.html" title="options.h" alt="" coords="479,259,554,285"/>
+<area shape="rect" id="node14" href="$Init__Ennemi1_8h.html" title="Init_Ennemi1.h" alt="" coords="261,259,370,285"/>
+<area shape="rect" id="node16" href="$main_8c.html" title="main.c" alt="" coords="394,259,455,285"/>
+<area shape="rect" id="node17" href="$perso_8h.html" title="perso.h" alt="" coords="579,259,644,285"/>
+<area shape="rect" id="node13" href="$options_8c.html" title="options.c" alt="" coords="458,333,533,360"/>
+<area shape="rect" id="node15" href="$Init__Ennemi1_8c.html" title="Init_Ennemi1.c" alt="" coords="261,333,370,360"/>
+<area shape="rect" id="node18" href="$perso_8c.html" title="perso.c" alt="" coords="1467,333,1532,360"/>
+<area shape="rect" id="node19" href="$vitesse__acceleration_8c.html" title="vitesse_acceleration.c" alt="" coords="557,333,709,360"/>
+<area shape="rect" id="node21" href="$Collision__trigo_8c.html" title="Collision_trigo.c" alt="" coords="903,259,1018,285"/>
+<area shape="rect" id="node23" href="$quiz_8c.html" title="quiz.c" alt="" coords="668,259,725,285"/>
+<area shape="rect" id="node27" href="$Perfect__Collision_8c.html" title="Perfect_Collision.c" alt="" coords="1983,259,2115,285"/>
+<area shape="rect" id="node29" href="$manette_8c.html" title="manette.c" alt="" coords="2139,259,2219,285"/>
+</map>

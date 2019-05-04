@@ -1,0 +1,24 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$Init__Ennemi_8c.html#acc0a5eae1c2488e30bf55a4b064cc833" title="Init_Ennemi" alt="" coords="128,5,219,32"/>
+<area shape="rect" id="node3" href="$main_8h.html#a7fcb81f452dcbccb499a3ce85062d589" title="Initial_personnage" alt="" coords="110,56,237,83"/>
+<area shape="rect" id="node4" href="$initialiser__background_8c.html#a627e8dbcc77f69a29241e6dccf38d77d" title="initialiser" alt="" coords="137,107,210,133"/>
+<area shape="rect" id="node5" href="$afficher__background_8c.html#ad5e245ac884b3a5bc774dca864a5e0c0" title="afficher" alt="" coords="141,157,206,184"/>
+<area shape="rect" id="node6" href="$initialiser__ojbets_8c.html#a86f775c18541dd59fc0bd67da6884963" title="Initial_objet" alt="" coords="129,208,217,235"/>
+<area shape="rect" id="node7" href="$Afficher__objets_8c.html#a42cab3047c025df170f86a167a498c40" title="afficherobjet" alt="" coords="127,259,220,285"/>
+<area shape="rect" id="node8" href="$collision_8c.html#a1201e4f88c0ee7608ca131ce01681997" title="collisionall" alt="" coords="132,360,215,387"/>
+<area shape="rect" id="node9" href="$main_8h.html#a17f70e17a66034ab2cfe4ecd23d0a96a" title="enigme" alt="" coords="321,284,385,311"/>
+<area shape="rect" id="node15" href="$main_8h.html#a6f4235003ceefe415dda8f716d31883d" title="event_handler" alt="" coords="122,411,225,437"/>
+<area shape="rect" id="node16" href="$main_8h.html#a1880f3d7872a8c94f49dc85b5db7c5d9" title="deplacement" alt="" coords="125,461,221,488"/>
+<area shape="rect" id="node17" href="$Animer__Personnage_8c.html#a3dc3993bdcecc71ad5576c072f25e29d" title="Animer_Personnage" alt="" coords="104,512,243,539"/>
+<area shape="rect" id="node18" href="$main_8h.html#a299c235a77199e8a52bd14c3278a4882" title="Vitesse" alt="" coords="140,563,207,589"/>
+<area shape="rect" id="node19" href="$main_8h.html#aadd479ddab8191523cfee947e8a718b1" title="Afficher_perso" alt="" coords="120,613,227,640"/>
+<area shape="rect" id="node20" href="$quiz_8h.html#af872df93192ceb6d726090c6801d0127" title="init_images" alt="" coords="129,664,217,691"/>
+<area shape="rect" id="node21" href="$main_8h.html#afc8b6113658127f5da2f173a2f07d697" title="mvtaleatoire" alt="" coords="127,715,220,741"/>
+<area shape="rect" id="node22" href="$Afficher__Ennemi_8c.html#a5bd3b2cfb590a56ce994b524cd23e1aa" title="Afficher_Ennemi" alt="" coords="114,765,233,792"/>
+<area shape="rect" id="node23" href="$main_8h.html#a81c2e8441b67355bf2c68a5c0fa4d2d6" title="scrolling" alt="" coords="138,816,209,843"/>
+<area shape="rect" id="node10" href="$collision__bounding__box_8c.html#aaf6f1dec5bb7d4e93d8d580a8e550442" title="collision" alt="" coords="463,411,532,437"/>
+<area shape="rect" id="node11" href="$Collision__trigo_8c.html#aa7a006f89e162da81cf20be078bf3653" title="Collision_Ennemi" alt="" coords="291,385,414,412"/>
+<area shape="rect" id="node12" href="$collision__bounding__box_8c.html#aada0004db077b368ab0b29a7f0e74d72" title="collisionbox" alt="" coords="307,436,398,463"/>
+<area shape="rect" id="node13" href="$Perfect__Collision_8c.html#a3020d18687b9b653f5faf2bc7dce1a04" title="Collision_Parfaite" alt="" coords="291,487,415,513"/>
+<area shape="rect" id="node14" href="$Perfect__Collision_8c.html#a5d7d9b111644c79dcef217c6dad13f50" title="getpixel" alt="" coords="464,487,531,513"/>
+</map>
