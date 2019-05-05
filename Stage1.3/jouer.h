@@ -1,5 +1,5 @@
-#ifndef MAIN_H_INCLUDED
-#define MAIN_H_INCLUDED
+#ifndef JOUER_H_INCLUDED
+#define JOUER_H_INCLUDED
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -20,6 +20,9 @@
 //#include "Perfect_Collision.h"
 #include "quiz.h"
 //#include "vitesse_acceleration.h"
+#include <SDL/SDL_rotozoom.h>
+
+
 typedef struct 
 {
 
@@ -83,16 +86,28 @@ typedef struct EO
 	SDL_Rect positionobjett;
 }EO;
 
+
+typedef struct
+{
+	SDL_Surface *Border;
+	SDL_Surface *Overview;
+	SDL_Rect Pos;
+
+
+}Map;
+
+
 void initialiser (background *b);
 void afficher (SDL_Surface *ecran , background *b ) ;
 Player Initial_personnage();
+Player Initial_personnage2();
 void event_handler(SDL_Event event,Direction *Sens ,Etat *State,int *keysHeld);
-void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys);
+void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys,int collision);
 void Saute(Player *hero,float impulsion);
 void ControleSol(Player *hero);
 void Gravite(Player *hero,float factgravite,float factsautmaintenu,Uint8* keys);
 void Afficher_perso(Player hero,int vie,SDL_Surface *ecran);
-void Animer_Personnage(int *frametime ,int nmb_frame,int *frame,Player *hero,Direction *Sens ,Etat *State);
+void Animer_Personnage(int *frametime ,int *frame,Player *hero,Direction *Sens ,Etat *State);
 void Initial_objet(EO *ob,EO *clef,EO *porte,EO *piste);
 void afficherobjet(EO *ob,EO *clef,EO *porte,EO *piste,SDL_Surface *ecran,background *b);
 void scrolling (background *b,SDL_Surface *ecran,Direction Sens,Etat State);
@@ -110,7 +125,9 @@ void quiz(SDL_Surface *ecran,int d);
 void good(SDL_Surface *ecran);
 //void Vitesse(Direction Sens,Etat State,Player *hero);
 void jouer(SDL_Surface *ecran);
-void Nettoyer_stage(SDL_Surface *ecran);
+void Nettoyer_stage(background * b);
 int arduinoWriteData(int w);
 void arduinoReadData(int *x);
+void Rotozoom(SDL_Surface * ecran, background b,EO clef, double angle);
+void Mini_map(SDL_Surface* ecran,Map M);
 #endif

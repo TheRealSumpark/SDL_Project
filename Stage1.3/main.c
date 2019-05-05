@@ -60,8 +60,8 @@ _Couleur_ SDL_LireCouleur(SDL_Surface * surface, int x, int y)
 void main(SDL_Surface *screen)
 {	
 
-	Ennemii Slime;
-	Slime=Init_Ennemi1();	
+	//Ennemii Slime;
+	//Slime=Init_Ennemi1();	
 	anim Wind;
 	Wind=Init_Anim();
 	
@@ -212,13 +212,13 @@ void main(SDL_Surface *screen)
 		{frame1 =frame=0;}
 		
 		
-		if (frame2<47)
-		{frame3=frame2;}
-		if (frame2>47)
+		/*if (frame2<47)
+		{frame3=frame2;}*/
+		/*if (frame2>47)
 		{frame2=frame3=0;}
-		printf("%d",frame3);
+		printf("%d",frame3);*/
 		SDL_BlitSurface(background, NULL, screen, NULL);
-		SDL_BlitSurface(Slime.Anim_Ennemi[frame3],NULL,screen,NULL);
+		//SDL_BlitSurface(Slime.Anim_Ennemi[frame3],NULL,screen,NULL);
 		SDL_BlitSurface (Wind.Anim[frame1],NULL,screen,NULL);
 		
 		
@@ -232,7 +232,7 @@ void main(SDL_Surface *screen)
 		Mix_FreeChunk(check);
 		Mix_FreeMusic(musique);
 		SDL_FreeSurface (Wind.Anim[22]);
-		SDL_FreeSurface(Slime.Anim_Ennemi[48]);
+		//SDL_FreeSurface(Slime.Anim_Ennemi[48]);
 		
 		SDL_FreeSurface(backgroundCollision);
 		fclose(f);

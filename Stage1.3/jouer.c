@@ -14,6 +14,25 @@
 */
 void jouer(SDL_Surface *ecran)
 {
+
+
+//ROTOZOOM VARIABLES
+double angle=0;
+Map M;
+M.Overview=NULL;
+M.Border=IMG_Load("Border.png");
+
+int on =0;
+//
+
+
+	//Declaring P2
+	int hero2_on=1;
+	int frametime_P2=0,frame_P2=0;
+	Player hero_2;
+	hero_2=Initial_personnage2();
+	// End of declaration of P2
+
          int d;	
 	 srand(time(NULL));
     	d=rand()%3+1;
@@ -82,40 +101,72 @@ void jouer(SDL_Surface *ecran)
 	case SDL_KEYDOWN :
 	switch (event.key.keysym.sym){
 
-	 case SDLK_ESCAPE :Nettoyer_stage(ecran);
+	 case SDLK_ESCAPE :Nettoyer_stage(&b);
 		main(ecran); 
 		break;
 	}}
 	afficher(ecran,&b);
 	Initial_objet(ob,&clef,&porte,&piste);
 	afficherobjet(ob,&clef,&porte,&piste,ecran,&b);
+	int collision=0;
+	collision=collisionbox(hero.perso,ob[4].objett,hero.Pos_perso,ob[4].positionobjett);
+
+
 	localisation=collisionall(ob,clef,porte,piste,&hero,&vie,&score,Sens,State,Mob,C,Background);
 	event_handler(event,&Sens ,&State,keysHeld);
 	SDL_PumpEvents();
         keys = SDL_GetKeyState(&numkeys);
-	deplacement(Sens,State,&hero,keysHeld,&frametime1,nmb1_frame,&frame1,keys);
-	Animer_Personnage(&frametime ,nmbb_frame,&frame,&hero,&Sens,&State);
+	deplacement(Sens,State,&hero,keysHeld,&frametime1,nmb1_frame,&frame1,keys,collision);
+	Animer_Personnage(&frametime ,&frame,&hero,&Sens,&State);
 	//Vitesse(Sens,State,&hero);	
 	Afficher_perso(hero,hero.P_health,ecran);
-	if(localisation==1)
+
+
+
+
+
+	//Printing second hero
+	if (hero2_on)
+	{
+	collisionall(ob,clef,porte,piste,&hero_2,&vie,&score,Sens,State,Mob,C,Background);
+	Animer_Personnage(&frametime_P2,&frame_P2,&hero_2,&Sens,&State);	
+	Afficher_perso(hero_2,hero_2.P_health,ecran);
+	}	
+		
+	
+
+	Mini_map(ecran,M);
+/*
+if (!on)
+		{	 Rotozoom(ecran,b,clef,angle);
+	on=1;}*/
+
+	
+	//localisation=1;	
+	/*if(localisation==1)
 	{
               init_images;
               enigme(d,ecran);
-       	}	
+       	}	*/
+
+
+
 	mvtaleatoire (&Mob[0]  , min ,  max );
 	mvtaleatoire (&Mob[1]  , min1 ,  max1 );
 	mvtaleatoire (&Mob[3]  , min2 ,  max2);
 	Afficher_Ennemi(Mob[0],ecran);
 	Afficher_Ennemi(Mob[1],ecran);
 	Afficher_Ennemi(Mob[3],ecran);
+	
 	//scrolling (&b,ecran,Sens,State);
 	SDL_Flip(ecran);
-	}while(continuer);
 
+	}while(continuer);
+	
 	SDL_FreeSurface(ecran);
 	SDL_Quit();
 }
-void Nettoyer_stage(SDL_Surface *ecran)
+void Nettoyer_stage(background * b)
 {
-		SDL_FreeSurface(ecran);
+		SDL_FreeSurface(b->image);
 }

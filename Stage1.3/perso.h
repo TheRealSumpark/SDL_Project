@@ -13,7 +13,7 @@ void event_handler(SDL_Event event,Direction *Sens ,Etat *State,int *keysHeld);
 void Saute(Player *hero,float impulsion);
 void ControleSol(Player *hero);
 void Gravite(Player *hero,float factgravite,float factsautmaintenu,Uint8* keys);
-void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys);
+void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys,int collision);
 void Afficher_perso(Player hero,int vie,SDL_Surface *ecran);
 
 #endif

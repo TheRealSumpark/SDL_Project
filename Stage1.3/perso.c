@@ -5,6 +5,7 @@
 #include  "manette.h"
 #define STAT_SOL 0
 #define STAT_AIR 1
+
 /**
 * @file perso.c	
 */
@@ -67,6 +68,75 @@ hero1.positionHealth.y=0;
 //ajouter jump et 
 return hero1;
 }
+
+Player Initial_personnage2()
+{
+
+
+Player hero2;
+
+
+hero2.nmb_mv=4;
+hero2.nmb_attack=5;
+hero2.P_health=3;
+hero2.perso_idle[0]=IMG_Load("Sorlo/idle/0.png");
+hero2.perso_idle[1]=IMG_Load("Sorlo/idle/1.png");
+hero2.perso=hero2.perso_idle[0];
+
+
+hero2.perso_mv_right[0]=IMG_Load("Sorlo/mv_right/0.png");
+hero2.perso_mv_right[1]=IMG_Load("Sorlo/mv_right/1.png");
+hero2.perso_mv_right[2]=IMG_Load("Sorlo/mv_right/2.png");
+hero2.perso_mv_right[3]=IMG_Load("Sorlo/mv_right/3.png");
+
+hero2.perso_mv_left[0]=IMG_Load("Sorlo/mv_left/0.png");
+hero2.perso_mv_left[1]=IMG_Load("Sorlo/mv_left/1.png");
+hero2.perso_mv_left[2]=IMG_Load("Sorlo/mv_left/2.png");
+hero2.perso_mv_left[3]=IMG_Load("Sorlo/mv_left/3.png");
+
+
+
+
+
+
+hero2.Pos_perso.x=160;
+hero2.Pos_perso.y=575;
+hero2.Pos_perso.h=hero2.perso->h;
+hero2.Pos_perso.w=hero2.perso->w;
+
+
+
+
+hero2.perso_attack_right[0]=IMG_Load("Sorlo/attack_right/0.png");
+hero2.perso_attack_right[1]=IMG_Load("Sorlo/attack_right/1.png");
+hero2.perso_attack_right[2]=IMG_Load("Sorlo/attack_right/2.png");
+hero2.perso_attack_right[3]=IMG_Load("Sorlo/attack_right/3.png");
+hero2.perso_attack_right[4]=IMG_Load("Sorlo/attack_right/4.png");
+
+
+hero2.perso_attack_left[0]=IMG_Load("Sorlo/attack_left/0.png");
+hero2.perso_attack_left[1]=IMG_Load("Sorlo/attack_left/1.png");
+hero2.perso_attack_left[2]=IMG_Load("Sorlo/attack_left/2.png");
+hero2.perso_attack_left[3]=IMG_Load("Sorlo/attack_left/3.png");
+hero2.perso_attack_left[4]=IMG_Load("Sorlo/attack_left/4.png");
+
+
+
+
+hero2.Player_Health[0]=IMG_Load("love1-1.png");
+hero2.Player_Health[1]=IMG_Load("love2.png");
+hero2.Player_Health[2]=IMG_Load("love3.png");
+
+
+hero2.positionHealth.x=0;
+hero2.positionHealth.y=40;
+return hero2;
+}
+
+
+
+
+
 
 void Afficher_perso(Player hero,int vie,SDL_Surface *ecran)
 {
@@ -165,8 +235,9 @@ void Saute(Player *hero,float impulsion)
 void ControleSol(Player *hero)
 {
     if (hero->Pos_perso.y>575.0f)
-    {
-        hero->Pos_perso.y = 575.0f;
+    {	
+        
+	hero->Pos_perso.y = 575.0f;
         if (hero->vy>0.0f)
             hero->vy = 0.0f;
         hero->status = STAT_SOL;
@@ -180,7 +251,7 @@ void Gravite(Player *hero,float factgravite,float factsautmaintenu,Uint8* keys)
     hero->vy += factgravite;
 }
 
-void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys)
+void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys,int collision)
 {
 float lateralspeed = 0.5f;
 float airlateralspeedfacteur = 0.5f;
@@ -203,7 +274,7 @@ tempsActuel = SDL_GetTicks();
 SDL_Event event;
 if (tempsActuel - tempsPrecedent > TEMPS)
  { 
-switch(State )
+switch(State)
 { 
 case ATTACK: break;
 	case IDLE : break;
@@ -218,12 +289,14 @@ direction=1;
 hero->Pos_perso.x+=5 ;
 hero->vitesse+=hero->ACCELERATION;
 hero->vx+=lateralspeed;
+ControleSol(hero);
 break;
 			case LEFT:
 direction=2;
 hero->Pos_perso.x-=5;
 hero->vitesse+=hero->ACCELERATION;
 hero->vx-=lateralspeed;	
+ControleSol(hero);
 break;
 
 break;	
@@ -231,8 +304,10 @@ break;
 }
 tempsPrecedent = tempsActuel; 
 }
-if (hero->status == STAT_AIR) 
-        lateralspeed*= airlateralspeedfacteur;
+
+
+
+
 if (hero->status == STAT_SOL && !keys[SDLK_LEFT] && !keys[SDLK_RIGHT]) 
         hero->vx/=adherance;
 if (hero->vx>maxhspeed) 
@@ -241,10 +316,30 @@ if (hero->vx<-maxhspeed)
         hero->vx = -maxhspeed;
 if (keys[SDLK_UP] && hero->status == STAT_SOL)
         Saute(hero,impulsion);
-    Gravite(hero,factgravite,factsautmaintenu,keys);
+
+if (hero->status == STAT_AIR) 
+        {lateralspeed*= airlateralspeedfacteur;
+	 Gravite(hero,factgravite,factsautmaintenu,keys);
     ControleSol(hero);
-    hero->Pos_perso.x +=hero->vx;
-   hero->Pos_perso.y +=hero->vy;
+   
+if (collision)
+{hero->status=STAT_SOL;
+hero->Pos_perso.y +=hero->vy-15;
+
+}
+
+else if (!collision)	
+{hero->Pos_perso.x +=hero->vx;
+ hero->Pos_perso.y +=hero->vy;
+ ControleSol(hero);
+
+
+
+}
+
+}
+
+   
 switch(direction)
 {
 case 1:

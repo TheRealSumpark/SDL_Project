@@ -5,7 +5,7 @@
 /**
 * @file Animer_Personnage.c	
 */
-void Animer_Personnage(int *frametime ,int nmb_frame,int *frame,Player *hero,Direction *Sens ,Etat *State)
+void Animer_Personnage(int *frametime ,int *frame,Player *hero,Direction *Sens ,Etat *State)
 {
 int FPS=60;
 
@@ -24,14 +24,14 @@ switch (*State)
 									if (FPS/(*frametime)==8)
 									{(*frametime)=0;
 									(*frame)++;
-									if (*frame==nmb_frame)
+									if (*frame==hero->nmb_attack)
 									{*frame=0;*State=IDLE;}}
 							break;
 							case RIGHT:	hero->perso=hero->perso_attack_right[*frame];
 									if (FPS/(*frametime)==8)
 									{(*frametime)=0;
 									(*frame)++;
-									if (*frame==nmb_frame)
+									if (*frame==hero->nmb_attack)
 									{*frame=0;*State=IDLE;}}
 						
 									
@@ -53,7 +53,7 @@ case LEFT:						(*frametime)++;
 									if (FPS/(*frametime)==8)
 									{(*frametime)=0;
 									(*frame)++;
-									if (*frame==nmb_frame)
+									if (*frame==hero->nmb_mv)
 									{*frame=0;*State=IDLE;}};break;
 
 				
@@ -65,7 +65,7 @@ case RIGHT:
 									if (FPS/(*frametime)==8)
 									{(*frametime)=0;
 									(*frame)++;
-									if (*frame==nmb_frame)
+									if (*frame==hero->nmb_mv)
 									{*frame=0;*State=IDLE;}}
 							
 							break;

@@ -69,6 +69,9 @@ typedef struct Player
 	int nmb_mv;
 	int nmb_attack;
 	int P_health;
+	
+
+
 }Player;
 
 typedef struct EO
@@ -93,6 +96,7 @@ typedef struct
 void initialiser (background *b);
 void afficher (SDL_Surface *ecran , background *b ) ;
 Player Initial_personnage();
+Player Initial_personnage2();
 void event_handler (SDL_Event event,Direction *Sens ,Etat *State);
 void deplacement(Direction Sens,Etat State,Player *hero );
 void Afficher_perso(Player hero,int vie,SDL_Surface *ecran);

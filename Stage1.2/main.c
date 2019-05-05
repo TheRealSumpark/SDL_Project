@@ -8,14 +8,17 @@ double angle=0;
 Map M;
 M.Overview=NULL;
 M.Border=IMG_Load("Border.png");
-SDL_Rect Border_pos;
 M.Pos.x=-30;
 M.Pos.y=-70;
 //
          int d;	int on =0;
 	 srand(time(NULL));
     	d=rand()%3+1;
-		
+	
+
+	
+
+	
 	
 	int i=0,len,X,Y;
 	Coordinate C;
@@ -46,7 +49,16 @@ M.Pos.y=-70;
  	min2 = Mob[3].Pos_Ennemi.x -40 ;
 	int vie=3,score=0;
 	int localisation=0;
-	int frametime=0,frametime1=0,frame=0,nmbb_frame=5,nmb1_frame=5;
+	int frametime=0,frame=0,nmbb_frame=5;
+	
+	//Declaring P2
+
+	int hero2_on=1;
+	int frametime_P2=0,frame_P2=0;
+	Player hero_2;
+	hero_2=Initial_personnage2();
+	// End of declaration of P2
+	
 	SDL_Init(SDL_INIT_EVERYTHING);
 	Etat State;
 	Direction Sens,Sens1;
@@ -54,7 +66,11 @@ M.Pos.y=-70;
 	EO ob[7],clef,porte,piste;
 	EO  e[3];
 	Player hero;
+	
+
 	hero=Initial_personnage();
+	
+	
 	initialiser(&b);
 	int continuer = 1;
 	SDL_Surface *Background=NULL;
@@ -83,16 +99,30 @@ M.Pos.y=-70;
 	afficherobjet(ob,&clef,&porte,&piste,ecran,&b);
 	localisation=collisionall(ob,clef,porte,piste,&hero,&vie,&score,Sens,State,Mob,C,Background);
 	event_handler(event,&Sens ,&State) ; 
-	deplacement(Sens,State,&hero);
+	deplacement(Sens,State,&hero);	
 	Animer_Personnage(&frametime ,nmbb_frame,&frame,&hero,&Sens,&State);	
 	Afficher_perso(hero,hero.P_health,ecran);
+
+
+	//Printing second hero
+	if (hero2_on)
+	{
+	collisionall(ob,clef,porte,piste,&hero_2,&vie,&score,Sens,State,Mob,C,Background);
+	Animer_Personnage(&frametime_P2,nmbb_frame,&frame_P2,&hero_2,&Sens,&State);	
+	Afficher_perso(hero_2,hero_2.P_health,ecran);
 	
+
+
+
+
+
+	}	
 		
-	if (!on)
+	/*if (!on)
 {	 Rotozoom(ecran,b,clef,angle);
 	on=1;}
 	Mini_map(ecran,M);
-
+*/
 	if(localisation==1)
 	{
               init_images;
@@ -104,10 +134,10 @@ M.Pos.y=-70;
 	Afficher_Ennemi(Mob[0],ecran);
 	Afficher_Ennemi(Mob[1],ecran);
 	Afficher_Ennemi(Mob[3],ecran);
-	scrolling (&b,ecran,Sens,State);
+	//scrolling (&b,ecran,Sens,State);
 	SDL_Flip(ecran);
 	}while(continuer);
-
+	
 	SDL_FreeSurface(ecran);
 	SDL_Quit();
 }
