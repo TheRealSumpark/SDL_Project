@@ -51,7 +51,7 @@ _Couleur_g SDL_LireCouleurg2(SDL_Surface * surface, int x, int y)
     return couleur;
 }
 
-void saving (SDL_Surface *ecran)
+int saving (SDL_Surface *ecran)
 {
 FILE *f = fopen("idea3","w");
 _Couleur_g couleur ;
@@ -153,7 +153,7 @@ SDL_FreeSurface(choix_load);
 Mix_FreeChunk(check);
 SDL_FreeSurface(colisload);
 Mix_Quit();
-/*return verif_quit ;*/
+return verif_load ;
 }
 void Nettoyer_quit(SDL_Surface *choix_load)
 {
