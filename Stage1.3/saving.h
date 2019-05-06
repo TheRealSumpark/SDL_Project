@@ -7,6 +7,6 @@
 #include <SDL/SDL_mixer.h>
 #include <SDL/SDL_ttf.h>
 #include "main.h"
-void saving (SDL_Surface *ecran);
+int saving (SDL_Surface *ecran);
 void Nettoyer_load(SDL_Surface *choix_load);
 #endif 

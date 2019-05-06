@@ -251,6 +251,39 @@ void Gravite(Player *hero,float factgravite,float factsautmaintenu,Uint8* keys)
     hero->vy += factgravite;
 }
 
+
+void Manette(Etat * State ,Direction * Sens)
+{
+int x;
+//arduinoReadData(&x);
+	switch(x)
+
+{
+            	case 0: *State=IDLE; 
+             	break;
+
+             	case 3: if (*State==IDLE)
+			{*Sens=RIGHT;*State=WALK;}
+             	break; 
+	     
+	     	case 4: if (*State==IDLE)
+			{*Sens=LEFT;*State=WALK;}
+	     	break;
+	
+	     	case 5:if (*State==IDLE)
+			{*State=ATTACK;}
+	     	break;
+
+            	case 6: 
+            	break;						
+}
+
+
+}
+
+
+
+
 void deplacement(Direction Sens,Etat State,Player *hero,int *keysHeld,int *frametime1 ,int nmb1_frame,int *frame1,Uint8* keys,int collision)
 {
 float lateralspeed = 0.5f;
@@ -354,6 +387,10 @@ if(LEFT && keysHeld[SDLK_LSHIFT]) {
 break;
 }
 
+
+
+
+/*
 //arduinoReadData(&x);
 	switch(x)
 
@@ -371,7 +408,7 @@ break;
 	     	break;
 
             	case 6: direction=6; 
-            	break;
+            	break;						
 }
 
 if(direction == 3 )
@@ -397,6 +434,6 @@ if (*frame1==nmb1_frame)
 if(direction == 6 )
 {
 hero->Pos_perso.y-=5;
-}
+}*/
 }
 

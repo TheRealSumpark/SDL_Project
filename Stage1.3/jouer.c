@@ -28,10 +28,26 @@ int on =0;
 
 	//Declaring P2
 	int hero2_on=1;
-	int frametime_P2=0,frame_P2=0;
+	int frametime_2=0,frame_2=0;
 	Player hero_2;
 	hero_2=Initial_personnage2();
+	int keysHeld_2[323] = {0};
+	Direction Sens_2;
+	Etat State_2; 
+	int collision_2;
+	int numkeys_2;
+	Uint8 * keys_2;
+
 	// End of declaration of P2
+
+	//choix input manette
+	int Input=1;	
+	//
+
+
+
+
+
 
          int d;	
 	 srand(time(NULL));
@@ -90,7 +106,7 @@ int on =0;
 
 	ecran = SDL_SetVideoMode(1867,800, 32, SDL_HWSURFACE);
 	SDL_WM_SetCaption("Stage 1", NULL);
-	
+	Initial_objet(ob,&clef,&porte,&piste);
     	do{
 	SDL_PollEvent(&event);
         switch(event.type)
@@ -106,14 +122,16 @@ int on =0;
 		break;
 	}}
 	afficher(ecran,&b);
-	Initial_objet(ob,&clef,&porte,&piste);
+	
 	afficherobjet(ob,&clef,&porte,&piste,ecran,&b);
 	int collision=0;
 	collision=collisionbox(hero.perso,ob[4].objett,hero.Pos_perso,ob[4].positionobjett);
 
 
 	localisation=collisionall(ob,clef,porte,piste,&hero,&vie,&score,Sens,State,Mob,C,Background);
-	event_handler(event,&Sens ,&State,keysHeld);
+	if (!Input)
+	{event_handler(event,&Sens ,&State,keysHeld);}
+	else {Manette(&State,&Sens);}
 	SDL_PumpEvents();
         keys = SDL_GetKeyState(&numkeys);
 	deplacement(Sens,State,&hero,keysHeld,&frametime1,nmb1_frame,&frame1,keys,collision);
@@ -122,24 +140,29 @@ int on =0;
 	Afficher_perso(hero,hero.P_health,ecran);
 
 
-
-
-
 	//Printing second hero
 	if (hero2_on)
 	{
-	collisionall(ob,clef,porte,piste,&hero_2,&vie,&score,Sens,State,Mob,C,Background);
-	Animer_Personnage(&frametime_P2,&frame_P2,&hero_2,&Sens,&State);	
+	
+	if (Input)
+	{event_handler(event,&Sens_2,&State_2,keysHeld_2);}
+	else {Manette(&State_2,&Sens_2);}
+
+	SDL_PumpEvents();
+        keys_2=SDL_GetKeyState(&numkeys_2);
+	collision_2=collisionall(ob,clef,porte,piste,&hero_2,&vie,&score,Sens,State,Mob,C,Background);
+	deplacement(Sens_2,State_2,&hero_2,keysHeld_2,&frametime_2,nmb1_frame,&frame_2,keys_2,collision_2);
+	Animer_Personnage(&frametime_2,&frame_2,&hero_2,&Sens_2,&State_2);	
 	Afficher_perso(hero_2,hero_2.P_health,ecran);
 	}	
 		
 	
 
 	Mini_map(ecran,M);
-/*
-if (!on)
-		{	 Rotozoom(ecran,b,clef,angle);
-	on=1;}*/
+
+	if (angle!=360)
+	{ Rotozoom(ecran,b,clef,&angle);
+	}
 
 	
 	//localisation=1;	
@@ -164,6 +187,45 @@ if (!on)
 	}while(continuer);
 	
 	SDL_FreeSurface(ecran);
+	SDL_FreeSurface(M.Border);
+	SDL_FreeSurface(M.Overview);
+	SDL_FreeSurface(Background);
+	for (i=0;i<hero.nmb_mv;i++)
+	{SDL_FreeSurface(hero.perso_mv_right[i]);
+	SDL_FreeSurface(hero.perso_mv_left[i]);}
+	for (i=0;i<hero.nmb_attack;i++)
+	{
+	SDL_FreeSurface(hero.perso_attack_right[i]);
+	SDL_FreeSurface(hero.perso_attack_left[i]);
+	}
+	for (i=0;i<3;i++)
+	{SDL_FreeSurface(hero.Player_Health[i]);
+	}
+	for (i=0;i<2;i++)
+	{SDL_FreeSurface(hero.perso_idle[i]);}
+	
+
+	for (i=0;i<hero_2.nmb_mv;i++)
+	{SDL_FreeSurface(hero_2.perso_mv_right[i]);
+	SDL_FreeSurface(hero.perso_mv_left[i]);}
+	for (i=0;i<hero_2.nmb_attack;i++)
+	{
+	SDL_FreeSurface(hero_2.perso_attack_right[i]);
+	SDL_FreeSurface(hero_2.perso_attack_left[i]);
+	}
+	for (i=0;i<3;i++)
+	{SDL_FreeSurface(hero_2.Player_Health[i]);
+	}
+	for (i=0;i<2;i++)
+	{SDL_FreeSurface(hero_2.perso_idle[i]);}
+
+
+/*
+	SDL_FreeSurface();
+	SDL_FreeSurface();
+	SDL_FreeSurface();*/
+
+
 	SDL_Quit();
 }
 void Nettoyer_stage(background * b)

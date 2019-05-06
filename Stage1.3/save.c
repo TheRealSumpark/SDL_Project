@@ -1,5 +1,5 @@
-#include "save.h"
-int saveGame(char nomfichier[],player *hero1 ,player *hero2, Ennemi *Mob , EO *obj , background *b ,int nbsave , int verif_input , int nbsave){
+#include "jouer.h"
+int saveGame(char nomfichier[],Player *hero1 ,Player *hero2, Ennemi *Mob  , background *b ,int nbsave , int verif_input , int nbsave){
 	FILE *f=NULL;
 
 	f=fopen(nomfichier,"a");

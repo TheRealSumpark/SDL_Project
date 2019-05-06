@@ -128,6 +128,7 @@ void jouer(SDL_Surface *ecran);
 void Nettoyer_stage(background * b);
 int arduinoWriteData(int w);
 void arduinoReadData(int *x);
-void Rotozoom(SDL_Surface * ecran, background b,EO clef, double angle);
+void Rotozoom(SDL_Surface * ecran, background b,EO clef, double *angle);
 void Mini_map(SDL_Surface* ecran,Map M);
+void Manette(Etat * State ,Direction * Sens);
 #endif
